@@ -102,7 +102,7 @@ class OrderInvoiceCreateTest extends \Magento\TestFramework\TestCase\WebapiAbstr
     {
         $this->expectException(\Exception::class);
         $this->expectExceptionMessageMatches(
-            '/Invoice Document Validation Error\\(s\\):(?:\\n|\\\\n)'
+            '/Invoice Document Registration Error\\(s\\):(?:\\n|\\\\n)'
             . 'The invoice can\'t be created without products. Add products and try again./'
         );
 
@@ -152,7 +152,7 @@ class OrderInvoiceCreateTest extends \Magento\TestFramework\TestCase\WebapiAbstr
     {
         $this->expectException(\Exception::class);
         $this->expectExceptionMessageMatches(
-            '/Invoice Document Validation Error\\(s\\):(?:\\n|\\\\n)'
+            '/Invoice Document Registration Error\\(s\\):(?:\\n|\\\\n)'
             . 'The invoice can\'t be created without products. Add products and try again./'
         );
 

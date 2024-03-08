@@ -322,7 +322,7 @@ class AddressTest extends TestCase
         )
             ->validateData()
             ->hasToBeTerminated();
-        $this->assertFalse($result, 'Validation result must be false.');
+        $this->assertFalse($result, 'Registration result must be false.');
 
         // import data
         $this->_entityAdapter->importData();
@@ -417,7 +417,7 @@ class AddressTest extends TestCase
         $result = $this->_entityAdapter->setSource(
             ImportAdapter::findAdapterFor($sourceFile, $directoryWrite)
         )->validateData()->hasToBeTerminated();
-        $this->assertTrue(!$result, 'Validation result must be true.');
+        $this->assertTrue(!$result, 'Registration result must be true.');
 
         // import data
         $this->_entityAdapter->importData();

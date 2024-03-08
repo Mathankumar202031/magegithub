@@ -361,7 +361,7 @@ class CreateTest extends \PHPUnit\Framework\TestCase
         $this->model->setIsValidate(true)->setBillingAddress($invalidAddressData);
         try {
             $this->model->createOrder();
-            $this->fail('Validation errors are expected to lead to exception during createOrder() call.');
+            $this->fail('Registration errors are expected to lead to exception during createOrder() call.');
         } catch (\Magento\Framework\Exception\LocalizedException $e) {
             /** createOrder is expected to throw exception with empty message when validation error occurs */
         }
@@ -899,7 +899,7 @@ class CreateTest extends \PHPUnit\Framework\TestCase
         $this->model->setIsValidate(true)->setShippingAddress($invalidAddressData);
         try {
             $this->model->createOrder();
-            $this->fail('Validation errors are expected to lead to exception during createOrder() call.');
+            $this->fail('Registration errors are expected to lead to exception during createOrder() call.');
         } catch (\Magento\Framework\Exception\LocalizedException $e) {
             /** createOrder is expected to throw exception with empty message when validation error occurs */
         }
@@ -972,7 +972,7 @@ class CreateTest extends \PHPUnit\Framework\TestCase
             self::assertNotEmpty($orderData['increment_id'], 'Order increment ID is empty.');
         } catch (\Magento\Framework\Exception\LocalizedException $e) {
             /** createOrder is expected to throw exception with empty message when validation error occurs */
-            self::assertEquals('Validation is failed.', $e->getRawMessage());
+            self::assertEquals('Registration is failed.', $e->getRawMessage());
         }
     }
 

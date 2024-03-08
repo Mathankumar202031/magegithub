@@ -193,7 +193,7 @@ class ProductOptionsTest extends ProductTestBase
         $pathToFile = __DIR__ . '/../_files/' . $importFile;
         $importModel = $this->createImportModel($pathToFile);
         $errors = $importModel->validateData();
-        $this->assertTrue($errors->getErrorsCount() == 0, 'Import File Validation Failed');
+        $this->assertTrue($errors->getErrorsCount() == 0, 'Import File Registration Failed');
         $importModel->importData();
         /** @var \Magento\Catalog\Api\ProductRepositoryInterface $productRepository */
         $productRepository = $objectManager->get(

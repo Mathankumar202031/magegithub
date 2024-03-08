@@ -383,7 +383,7 @@ class CustomerMetadataTest extends TestCase
         $attributeMetadata = $formAttributesMetadata['firstname'];
         $this->assertInstanceOf(\Magento\Customer\Model\Data\AttributeMetadata::class, $attributeMetadata);
         $this->assertEquals('firstname', $attributeMetadata->getAttributeCode(), 'Attribute code is invalid');
-        $this->assertNotEmpty($attributeMetadata->getValidationRules(), 'Validation rules are not set');
+        $this->assertNotEmpty($attributeMetadata->getValidationRules(), 'Registration rules are not set');
         $this->assertEquals('1', $attributeMetadata->isSystem(), '"Is system" field value is invalid');
         $this->assertEquals('40', $attributeMetadata->getSortOrder(), 'Sort order is invalid');
 

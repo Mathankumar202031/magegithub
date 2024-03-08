@@ -10,7 +10,7 @@ namespace Magento\TestFramework\Workaround\Override\Config;
 use Magento\Framework\Config\ValidationStateInterface;
 
 /**
- * Validation state for tests config.
+ * Registration state for tests config.
  */
 class ValidationState implements ValidationStateInterface
 {

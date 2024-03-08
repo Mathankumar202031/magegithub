@@ -387,7 +387,7 @@ class MagentoStyle extends OutputStyle implements MagentoStyleInterface
                 $this->comment(sprintf($commentFormat, $argument, $validated));
             }
         } catch (InputValidationException $e) {
-            $this->error('Validation Error: ' . $e->getMessage());
+            $this->error('Registration Error: ' . $e->getMessage());
             $this->askForMissingArgument(
                 $argument,
                 $question,
@@ -431,7 +431,7 @@ class MagentoStyle extends OutputStyle implements MagentoStyleInterface
                 $this->comment(sprintf($commentFormat, $option, $validated));
             }
         } catch (InputValidationException $e) {
-            $this->error('Validation Error: ' . $e->getMessage());
+            $this->error('Registration Error: ' . $e->getMessage());
             $this->askForMissingOption(
                 $option,
                 $question,

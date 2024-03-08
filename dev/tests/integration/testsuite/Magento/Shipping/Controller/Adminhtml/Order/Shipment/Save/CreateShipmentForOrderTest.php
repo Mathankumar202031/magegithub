@@ -210,7 +210,7 @@ class CreateShipmentForOrderTest extends AbstractShipmentControllerTest
         ];
         $this->performShipmentCreationRequest($postData);
         $this->assertCreateShipmentRequestWithError(
-            "Shipment Document Validation Error(s):\nYou can't create a shipment without products.",
+            "Shipment Document Registration Error(s):\nYou can't create a shipment without products.",
             "admin/order_shipment/new/order_id/{$orderId}"
         );
     }
@@ -234,7 +234,7 @@ class CreateShipmentForOrderTest extends AbstractShipmentControllerTest
         $postData = $this->createPostData($dataToSend);
         $this->performShipmentCreationRequest($postData);
         $this->assertCreateShipmentRequestWithError(
-            "Shipment Document Validation Error(s):\nYou can't create a shipment without products.",
+            "Shipment Document Registration Error(s):\nYou can't create a shipment without products.",
             "admin/order_shipment/new/order_id/{$postData['order_id']}"
         );
     }

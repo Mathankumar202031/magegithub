@@ -191,7 +191,7 @@ class ShipOrderTest extends \Magento\TestFramework\TestCase\WebapiAbstract
     {
         $this->expectException(\Exception::class);
         $this->expectExceptionMessageMatches(
-            '/Shipment Document Validation Error\\(s\\):(?:\\n|\\\\n)Please enter a tracking number./'
+            '/Shipment Document Registration Error\\(s\\):(?:\\n|\\\\n)Please enter a tracking number./'
         );
 
         $this->_markTestAsRestOnly('SOAP requires an tracking number to be provided so this case is not possible.');
@@ -335,7 +335,7 @@ class ShipOrderTest extends \Magento\TestFramework\TestCase\WebapiAbstract
         } catch (\Exception $exception) {
             $this->assertExceptionMessage(
                 $exception,
-                'Shipment Document Validation Error(s): You can\'t create a shipment without products.'
+                'Shipment Document Registration Error(s): You can\'t create a shipment without products.'
             );
         }
     }
@@ -373,7 +373,7 @@ class ShipOrderTest extends \Magento\TestFramework\TestCase\WebapiAbstract
         } catch (\Exception $exception) {
             $this->assertExceptionMessage(
                 $exception,
-                'Shipment Document Validation Error(s): '
+                'Shipment Document Registration Error(s): '
                 . 'You can\'t create a shipment without products. '
                 . 'Cannot create shipment as bundle product "bundle-product" has shipment type "Separately". '
                 . 'Bundle product options should be shipped instead.'
@@ -428,7 +428,7 @@ class ShipOrderTest extends \Magento\TestFramework\TestCase\WebapiAbstract
         } catch (\Exception $exception) {
             $this->assertExceptionMessage(
                 $exception,
-                'Shipment Document Validation Error(s): '
+                'Shipment Document Registration Error(s): '
                 . 'You can\'t create a shipment without products. '
                 . 'Cannot create shipment as bundle product "bundle-product" has shipment type "Together". '
                 . 'Bundle product itself should be shipped instead.'

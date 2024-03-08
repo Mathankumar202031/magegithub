@@ -404,7 +404,7 @@ class CreateAddressTest extends TestCase
     }
 
     /**
-     * Assert that after address creation customer group is Validation Error Group.
+     * Assert that after address creation customer group is Registration Error Group.
      *
      * @magentoAppIsolation enabled
      * @magentoDataFixture Magento/Customer/_files/customer_no_address.php
