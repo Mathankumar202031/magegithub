@@ -1,0 +1,101 @@
+<?php
+/** @var \Pearl\Student\Block\Form $block */
+$data = $this->getAllData();
+?>
+<div class="row">
+    <div class="col-md-8">
+        <form name="addData" method="post" id="addData" class="form"
+              action="<?php echo $this->getFormAction(); ?>"
+              data-hasrequired="<?= __('* Required Fields') ?>"
+              data-mage-init='{"validation":{}}'>
+            <fieldset class="fieldset">
+                <legend class="legend"><span><?= 'Student Registration' ?></span></legend>
+                <fieldset class="fieldset row">
+                    <?php if ($data->getId()) { ?>
+                        <input type="hidden" name="id" value="<?= $data->getId(); ?>">
+                        <?php } ?>
+                    <div class="fields col-md-6">
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= __('Name') ?></span></label>
+                            <div class="control">
+                                <input name="name" id="name" title="Name" value="<?= $data->getName(); ?>" class="input-text" type="text" maxlength="30"
+                                       data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?=  __('Date of Birth') ?></span></label>
+                            <div class="control">
+                                <input name="date_of_birth" id="date_of_birth" title="Date of Birth" value="<?= $data->getDate_of_birth(); ?>" class="input-date" type="date"
+                                       data-validate="{required:true}">
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?=__('Gender') ?></span></label>
+                            <div class="control">
+                                <input name="gender" id="male" title="Male" value="Male" class="input-radio" type="radio"
+                                       data-validate="{'validate-one-required-by-name':true}" <?= ($data->getGender() == 'Male') ?  "checked" : "";  ?>>
+                                <label class="label" for="male"><span><?= __('Male')?></span></label>
+                                <input name="gender" id="female" title="Female" value="Female" class="input-radio" type="radio"
+                                       data-validate="{'validate-one-required-by-name':true}" <?= ($data->getGender() == 'Female') ?  "checked" : "";  ?>>
+                                <label class="label" for="female"><span><?= __('Female')?></span></label>
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= __('Phone') ?></span></label>
+                            <div class="control">
+                                <input name="phone" id="phone" title="Phone" value="<?= $data->getPhone() ?>" class="input-radio" type="tel" maxlength="10"
+                                data-validate="{required:true}">
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= __('Email')?></span></label>
+                            <div class="control">
+                                <input name="email" id="email" title="Email" value="<?= $data->getEmail() ?>" class="input-text" type="text"
+                                       data-validate="{required:true, 'validate-email':true}">
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= __('College\University') ?></span></label>
+                            <div class="control">
+                                <select title="College\University" name="college_university" id="select" data-validate="{required:true}">
+                                    <option value=""><?= __('Choose the option') ?></option>
+                                    <option value="bharathiar university" <?php if($data->getCollege_university() == 'bharathiar university') { ?> selected="selected"<?php } ?> ><?= __('Bharathiar University') ?></option>
+                                    <option value="anna university" <?php if($data->getCollege_university() == 'anna university') { ?> selected="selected"<?php } ?> ><?= __('Anna University') ?></option>
+                                    <option value="bharathidasan university" <?php if($data->getCollege_university() == 'bharathidasan university') { ?> selected="selected"<?php } ?> ><?= __('Bharathidasan University') ?></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= __('Area of Interest') ?></span></label>
+                            <div class="control">
+                                <input name="area_of_interest[]" id="travel" title="Travel"  value="travel" class="input-text" type="checkbox"
+                                    <?php if ( $data->getArea_of_interest() !== null && in_array("travel", explode(",", $data->getArea_of_interest()))) { echo "checked"; } ?>
+                                       data-validate="{required:true}">
+                                <label class="label" for="travel"><span><?= __('Travel') ?></span></label>
+                                <input name="area_of_interest[]" id="sports" title="Sports"  value="sports" class="input-text" type="checkbox"
+                                    <?php if ( $data->getArea_of_interest() !== null && in_array("sports", explode(",", $data->getArea_of_interest()))) { echo "checked"; } ?>
+                                       data-validate="{required:true}"  >
+                                <label class="label" for="sports"><span><?= __('Sports') ?></span></label>
+                                <input name="area_of_interest[]" id="music" title="Music"  value="music" class="input-text" type="checkbox"
+                                    <?php if ($data->getArea_of_interest() !== null && in_array("music", explode(",", $data->getArea_of_interest()))) { echo "checked"; } ?>
+                                       data-validate="{required:true}"  >
+                                <label class="label" for="music"><span><?= __('Music') ?></span></label>
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= __('Comment') ?></span></label>
+                            <div class="control">
+                                <textarea name="comment" id="comment" title="Comment" class="input-text" data-validate="{required:true}" rows="10"><?= $data->getComment();?></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </fieldset>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button type="submit" class="action submit primary" title="Save"><span><?= __('Save') ?></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

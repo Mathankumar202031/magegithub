@@ -1,0 +1,63 @@
+<?php
+/** @var \Pearl\Student\Block\Studentlist $block */
+$collection = $block->getCollection();
+if ($collection):
+    ?>
+    <div class="table-wrapper orders-history">
+        <table class="data table table-order-items history" id="my-orders-table">
+            <caption class="table-caption"><?= __('Grid Record') ?></caption>
+            <thead>
+            <tr>
+                <th scope="col" class="col id"><?= __('id') ?></th>
+                <th scope="col" class="col name"><?= __('name') ?></th>
+                <th scope="col" class="col date"><?= __('date_of_birth') ?></th>
+                <th scope="col" class="col gender"><?= __('gender') ?></th>
+                <th scope="col" class="col phone"><?= __('phone') ?></th>
+                <th scope="col" class="col email"><?= __('email') ?></th>
+                <th scope="col" class="col college_university"><?= __('college_university') ?></th>
+                <th scope="col" class="col area_of_interest"><?= __('area_of_interest') ?></th>
+                <th scope="col" class="col comment"><?= __('comment') ?></th>
+                <th scope="col" class="col action"><?= __('Action') ?></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            foreach ($collection as $item): ?>
+                <tr>
+                    <td data-th="<?= __('id') ?>" class="col id">
+                        <?= $item->getId() ?>
+                    </td>
+                    <td data-th="<?= __('name') ?>" class="col name">
+                        <?= $item->getName() ?>
+                    </td>
+                    <td data-th="<?= __('date_of_birth') ?>" class="col date">
+                        <?= $item->getDate_of_birth() ?>
+                    </td>
+                    <td data-th="<?= __('gender') ?>" class="col gender">
+                        <?= $item->getGender() ?>
+                    </td>
+                    <td data-th="<?= __('phone') ?>" class="col phone">
+                        <?= $item->getPhone() ?>
+                    </td>
+                    <td data-th="<?= __('email') ?>" class="col email">
+                        <?= $item->getEmail () ?>
+                    </td>
+                    <td data-th="<?= __('college_university') ?>" class="col college_university">
+                        <?= $item->getCollege_university() ?>
+                    </td>
+                    <td data-th="<?= __('area_of_interest') ?>" class="col area_of_interest">
+                        <?= $item->getArea_of_interest() ?>
+                    </td>
+                    <td data-th="<?= __('comment') ?>" class="col comment">
+                        <?= $item->getComment() ?>
+                    </td>
+                    <td data-th="<?= __('Action') ?>" class="col delete">
+                        <a href="<?= $block->getDeleteAction() . 'id/' . $item->getId(); ?>"><?= __('Delete') ?></a>
+                        <a href="<?= $block->getEditAction() . 'id/' . $item->getId(); ?>"><?= __('Edit') ?></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Student List page</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Pearl\Student\Block\Studentlist" name="data.show" template="Pearl_Student::studentlist.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
