@@ -13,13 +13,13 @@
         </arguments>
     </type>
     <type name="Magento\Quote\Api\Data\CartInterface">
-        <plugin name="before_plugin" type="Pearl\Student\Plugin\BeforePlugin" sortOrder="1" disabled="true" />
+        <plugin name="before_plugin" type="Pearl\Student\Plugin\Test\BeforePlugin" sortOrder="1" disabled="true" />
     </type>
     <type name="Magento\Catalog\Model\Product">
-        <plugin name="after_plugin" type="Pearl\Student\Plugin\AfterPlugin" sortOrder="2" disabled="false" />
+        <plugin name="after_plugin" type="Pearl\Student\Plugin\Test\AfterPlugin" sortOrder="2" disabled="false" />
     </type>
     <type name="Magento\Quote\Api\Data\CartInterface">
-        <plugin name="around_plugin" type="Pearl\Student\Plugin\AroundPlugin" sortOrder="3" disabled="false"/>
+        <plugin name="around_plugin" type="Pearl\Student\Plugin\Test\AroundPlugin" sortOrder="3" disabled="false"/>
     </type>
     <preference for="Pearl\Student\Api\DataRepositoryInterface"  type="Pearl\Student\Model\DataRepository" />
     <preference for="Pearl\Student\Api\Data\DataInterface"  type="Pearl\Student\Model\Data" />

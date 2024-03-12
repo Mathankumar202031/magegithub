@@ -1,6 +1,6 @@
 <?php
 
-namespace Pearl\Student\Plugin;
+namespace Pearl\Student\Plugin\Test;
 
 use Magento\Catalog\Model\Product;
 

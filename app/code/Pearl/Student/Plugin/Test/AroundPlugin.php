@@ -1,6 +1,6 @@
 <?php
 
-namespace Pearl\Student\Plugin;
+namespace Pearl\Student\Plugin\Test;
 
 use Magento\Quote\Api\Data\CartInterface;
 
