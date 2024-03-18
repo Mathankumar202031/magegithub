@@ -3,15 +3,14 @@
     <type name="Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite">
         <arguments>
             <argument name="productProviders" xsi:type="array">
-<!--                <item name="custom_extension" xsi:type="object">\Pearl\Student\Ui\DataProvider\Product\Listing\Collector\SaleExtension</item>-->
                 <item name="custom_extension" xsi:type="object">\Pearl\Student\Ui\DataProvider\Product\Listing\Collector\CustomExtension</item>
             </argument>
         </arguments>
     </type>
-<!--    <type name="Pearl\Student\Ui\DataProvider\Product\Listing\Collector\CustomExtension">-->
-<!--        <plugin name="product_commit" type="Pearl\Student\Plugin\Product\PluginExtension" />-->
-<!--    </type>-->
-<!--    <type name="Magento\Sales\Api\OrderRepositoryInterface">-->
-<!--        <plugin name="orderComment_extension" type="Pearl\student\Plugin\OrderRepositoryPlugin" />-->
+    <type name="Magento\Checkout\Model\DefaultConfigProvider">
+        <plugin name="checkout-summary-product-attribute" type="Pearl\Student\Plugin\Checkout\Model\DefaultConfigProvider" />
+    </type>
+<!--    <type name="Magento\Quote\Api\CartRepositoryInterface">-->
+<!--        <plugin name="cart_extra_attribute" type="Pearl\Student\Plugin\CartRepositoryPlugin" />-->
 <!--    </type>-->
 </config>

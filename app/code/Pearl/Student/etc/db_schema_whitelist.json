@@ -11,5 +11,21 @@
         "constraint": {
             "PRIMARY": true
         }
+    },
+    "student_registration": {
+        "column": {
+            "id": true,
+            "name": true,
+            "date_of_birth": true,
+            "gender": true,
+            "phone": true,
+            "email": true,
+            "college_university": true,
+            "area_of_interest": true,
+            "comment": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
     }
 }

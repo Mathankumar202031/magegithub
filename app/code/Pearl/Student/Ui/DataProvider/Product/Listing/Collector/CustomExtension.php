@@ -15,12 +15,14 @@ class CustomExtension implements ProductRenderCollectorInterface
     /**
      * @var ProductRenderExtensionFactory
      */
-    private $productRenderExtensionFactory;
+    protected $productRenderExtensionFactory;
 
     /**
      * @var ProductAttributeRepositoryInterface
      */
     protected $productAttributeRepository;
+
+//    protected $black;
 
     public function __construct(
         ProductRenderExtensionFactory $productRenderExtensionFactory,
@@ -41,11 +43,12 @@ class CustomExtension implements ProductRenderCollectorInterface
         if (!$extensionAttributes) {
             $extensionAttributes = $this->productRenderExtensionFactory->create();
         }
+
         $productField = $product->getData('sale');
         $productSale = $product->getData('new');
-            $extensionAttributes->setNew($productSale);
-            $extensionAttributes->setSale($productField);
+        $extensionAttributes->setNew($productSale);
+        $extensionAttributes->setSale($productField);
         $productRender->setExtensionAttributes($extensionAttributes);
+        return $productSale;
     }
-
 }

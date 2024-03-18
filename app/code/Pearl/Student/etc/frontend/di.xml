@@ -13,7 +13,7 @@
         </arguments>
     </type>
     <type name="Magento\Quote\Api\Data\CartInterface">
-        <plugin name="before_plugin" type="Pearl\Student\Plugin\Test\BeforePlugin" sortOrder="1" disabled="true" />
+        <plugin name="before_plugin" type="Pearl\Student\Plugin\Test\BeforePlugin" sortOrder="4" disabled="true" />
     </type>
     <type name="Magento\Catalog\Model\Product">
         <plugin name="after_plugin" type="Pearl\Student\Plugin\Test\AfterPlugin" sortOrder="2" disabled="false" />
@@ -42,4 +42,7 @@
                 </argument>
             </arguments>
     </type>
+<!--    <type name="Magento\Catalog\Helper\Product\Configuration">-->
+<!--        <plugin name="bss-add-to-product-quote-coap" type="Pearl\Student\Plugin\QuotePlugin" sortOrder="1"/>-->
+<!--    </type>-->
 </config>

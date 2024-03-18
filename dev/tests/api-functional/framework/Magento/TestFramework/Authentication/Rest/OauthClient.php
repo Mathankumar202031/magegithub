@@ -87,7 +87,7 @@ class OauthClient extends AbstractService
     }
 
     /**
-     * Returns the TestModule1 Rest API endpoint.
+     * Returns the TestModule1 Soap API endpoint.
      *
      * @return UriInterface
      */

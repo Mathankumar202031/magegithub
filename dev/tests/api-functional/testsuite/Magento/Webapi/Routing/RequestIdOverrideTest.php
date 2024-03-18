@@ -11,7 +11,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 /**
  * Class to test overriding request body identifier property with id passed in url path parameter
  *
- * Refer to \Magento\Framework\Webapi\Rest\Request::overrideRequestBodyIdWithPathParam
+ * Refer to \Magento\Framework\Webapi\Soap\Request::overrideRequestBodyIdWithPathParam
  */
 class RequestIdOverrideTest extends \Magento\Webapi\Routing\BaseService
 {

@@ -4,10 +4,7 @@
         <attribute code="sale" type="string"/>
         <attribute code="new"  type="string"/>
     </extension_attributes>
-<!--    <extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">-->
-<!--        <attribute code="sale_product" type="string" />-->
-<!--    </extension_attributes>-->
-<!--    <extension_attributes for="Magento\Sales\Api\Data\OrderInterface">-->
-<!--        <attribute code="order_comment" type="string" />-->
-<!--    </extension_attributes>-->
+    <extension_attributes for="Magento\Quote\Api\Data\CartInterface">
+        <attribute code="new" type="string" />
+    </extension_attributes>
 </config>
