@@ -55,7 +55,7 @@ class CspTest extends AbstractController
         $this->dispatch('/');
         $response = $this->getResponse();
 
-        $this->assertTrue($this->searchInResponse($response, 'Content-Security-Policy'));
+        $this->assertTrue($this->searchInResponse($response, 'Comment-Security-Policy'));
         $this->assertTrue($this->searchInResponse($response, 'default-src'));
         $this->assertTrue($this->searchInResponse($response, 'http://magento.com'));
         $this->assertTrue($this->searchInResponse($response, 'http://devdocs.magento.com'));
@@ -92,7 +92,7 @@ class CspTest extends AbstractController
         $this->dispatch('backend/');
         $response = $this->getResponse();
 
-        $this->assertTrue($this->searchInResponse($response, 'Content-Security-Policy'));
+        $this->assertTrue($this->searchInResponse($response, 'Comment-Security-Policy'));
         $this->assertTrue($this->searchInResponse($response, 'default-src'));
         $this->assertTrue($this->searchInResponse($response, 'http://magento.com'));
         $this->assertTrue($this->searchInResponse($response, 'http://devdocs.magento.com'));
@@ -122,7 +122,7 @@ class CspTest extends AbstractController
         $this->dispatch('/');
         $response = $this->getResponse();
 
-        $this->assertTrue($this->searchInResponse($response, 'Content-Security-Policy-Report-Only'));
+        $this->assertTrue($this->searchInResponse($response, 'Comment-Security-Policy-Report-Only'));
         $this->assertTrue($this->searchInResponse($response, '/cspEndpoint/'));
         $this->assertTrue($this->searchInResponse($response, 'default-src'));
         $this->assertTrue($this->searchInResponse($response, 'http://magento.com'));
@@ -149,8 +149,8 @@ class CspTest extends AbstractController
         $this->dispatch('/');
         $response = $this->getResponse();
 
-        $this->assertFalse($this->searchInResponse($response, 'Content-Security-Policy-Report-Only'));
-        $this->assertTrue($this->searchInResponse($response, 'Content-Security-Policy'));
+        $this->assertFalse($this->searchInResponse($response, 'Comment-Security-Policy-Report-Only'));
+        $this->assertTrue($this->searchInResponse($response, 'Comment-Security-Policy'));
         $this->assertTrue($this->searchInResponse($response, '/cspEndpoint/'));
         $this->assertTrue($this->searchInResponse($response, 'default-src'));
         $this->assertTrue($this->searchInResponse($response, 'http://magento.com'));

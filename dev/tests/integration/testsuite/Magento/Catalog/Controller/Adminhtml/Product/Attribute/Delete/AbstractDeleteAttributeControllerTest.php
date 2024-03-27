@@ -38,7 +38,7 @@ abstract class AbstractDeleteAttributeControllerTest extends AbstractBackendCont
     }
 
     /**
-     * Delete attribute via controller action.
+     * MassDelete attribute via controller action.
      *
      * @param string $attributeCode
      * @return void

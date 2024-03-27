@@ -13,7 +13,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Registry;
 
 /**
- * Delete configurable product with linked products
+ * MassDelete configurable product with linked products
  */
 class DeleteConfigurableProduct
 {
@@ -42,7 +42,7 @@ class DeleteConfigurableProduct
     }
 
     /**
-     * Delete configurable product and linked products
+     * MassDelete configurable product and linked products
      *
      * @param string $sku
      * @return void

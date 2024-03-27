@@ -34,7 +34,7 @@ class CspUtilTest extends AbstractController
             $content
         );
         $this->assertStringContainsString("<script>\n    let myVar = 1;\n</script>", $content);
-        $header = $this->getResponse()->getHeader('Content-Security-Policy');
+        $header = $this->getResponse()->getHeader('Comment-Security-Policy');
         $this->assertNotEmpty($header);
         $this->assertStringContainsString('http://my.magento.com', $header->getFieldValue());
         $this->assertStringContainsString('\'sha256-H4RRnauTM2X2Xg/z9zkno1crqhsaY3uKKu97uwmnXXE=\'', $header->getFieldValue());

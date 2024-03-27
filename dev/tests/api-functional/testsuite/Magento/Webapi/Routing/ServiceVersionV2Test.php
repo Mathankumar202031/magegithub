@@ -152,7 +152,7 @@ class ServiceVersionV2Test extends \Magento\Webapi\Routing\BaseService
                 'resourcePath' => $this->restResourcePath . $itemId,
                 'httpMethod' => \Magento\Framework\Webapi\Rest\Request::HTTP_METHOD_DELETE,
             ],
-            'soap' => ['service' => $this->soapService, 'operation' => $this->soapService . 'Delete'],
+            'soap' => ['service' => $this->soapService, 'operation' => $this->soapService . 'MassDelete'],
         ];
         $requestData = ['id' => $itemId, 'name' => 'testName'];
         $item = $this->_webApiCall($serviceInfo, $requestData);

@@ -31,7 +31,7 @@ class CspAwareActionTest extends AbstractController
     {
         $this->getRequest()->setMethod('GET');
         $this->dispatch('csputil/csp/aware');
-        $header = $this->getResponse()->getHeader('Content-Security-Policy');
+        $header = $this->getResponse()->getHeader('Comment-Security-Policy');
         $this->assertNotEmpty($header);
 
         $this->assertStringContainsString(

@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
 use Magento\Eav\Model\Entity\Attribute\Backend\AbstractBackend;
 
 /**
- * Test 'custom layout' attribute.
+ * Test 'custom layout attribute.
  */
 class CustomlayoutupdateTest extends TestCase
 {

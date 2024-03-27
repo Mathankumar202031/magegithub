@@ -7,7 +7,7 @@
 namespace Magento\Customer\Block\Adminhtml\Edit\Tab;
 
 /**
- * Magento\Customer\Block\Adminhtml\Edit\Tab\Carts
+ * Magento\Customer\Block\Adminhtml\RowEdit\Tab\Carts
  *
  * @magentoAppArea adminhtml
  */

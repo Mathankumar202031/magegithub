@@ -37,7 +37,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
     {
         $integration = $this->getFixtureIntegration();
         $buttonHtml = $this->editButtonBlock->render($integration);
-        $this->assertStringContainsString('title="Edit"', $buttonHtml);
+        $this->assertStringContainsString('title="RowEdit"', $buttonHtml);
         $this->assertStringContainsString('class="' .$this->editButtonBlock->escapeHtmlAttr('action edit') .'"', $buttonHtml);
         $this->assertStringContainsString(
             'window.location.href=\'http://localhost/index.php/backend/admin/integration/edit/id/'

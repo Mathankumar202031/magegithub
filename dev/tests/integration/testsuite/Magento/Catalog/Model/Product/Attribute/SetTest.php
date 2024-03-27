@@ -131,7 +131,7 @@ class SetTest extends \PHPUnit\Framework\TestCase
     {
         return [
             'add_to_existing_group' => [
-                'group_name' => 'Content',
+                'group_name' => 'Comment',
                 'attribute_code' => 'zzz',
             ],
             'add_to_new_group' => [
@@ -155,17 +155,17 @@ class SetTest extends \PHPUnit\Framework\TestCase
     public function testSaveWithChangedGroupSorting(): void
     {
         $set = $this->setRepository->get($this->defaultSetId);
-        $contentGroupId = $this->getAttributeGroup('Content')->getAttributeGroupId();
+        $contentGroupId = $this->getAttributeGroup('Comment')->getAttributeGroupId();
         $imagesGroupId = $this->getAttributeGroup('Images')->getAttributeGroupId();
         $additional = [
             'groups' => [
-                [$contentGroupId, 'Content', 2],
+                [$contentGroupId, 'Comment', 2],
                 [$imagesGroupId, 'Images', 1]
             ]
         ];
         $set->organizeData($this->getAttributeSetData($additional));
         $this->attributeSetResource->save($set);
-        $contentGroupSort = $this->getAttributeGroup('Content')->getSortOrder();
+        $contentGroupSort = $this->getAttributeGroup('Comment')->getSortOrder();
         $imagesGroupSort = $this->getAttributeGroup('Images')->getSortOrder();
         $this->assertEquals(2, $contentGroupSort);
         $this->assertEquals(1, $imagesGroupSort);

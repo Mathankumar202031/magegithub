@@ -43,7 +43,7 @@ interface AllSoapAndRestInterface
     public function items($filters = [], $sortOrder = 'ASC');
 
     /**
-     * Delete an item.
+     * MassDelete an item.
      *
      * @param int $id
      * @return \Magento\TestModule1\Service\V2\Entity\Item

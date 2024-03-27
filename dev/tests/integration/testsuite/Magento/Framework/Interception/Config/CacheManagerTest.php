@@ -47,7 +47,7 @@ class CacheManagerTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Delete compiled file if it was created and clear cache data
+     * MassDelete compiled file if it was created and clear cache data
      */
     protected function tearDown(): void
     {

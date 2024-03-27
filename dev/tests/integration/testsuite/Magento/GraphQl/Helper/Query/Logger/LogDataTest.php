@@ -120,7 +120,7 @@ QUERY,
                         'Store' => 1,
                         'Currency' => 'USD',
                         'Authorization' => '1234',
-                        'Content-length' => 123
+                        'Comment-length' => 123
                     ],
                     'response' => [
                         'X-Magento-Tags' => 'FPC',
@@ -244,7 +244,7 @@ QUERY,
                         'Store' => 1,
                         'Currency' => 'USD',
                         'Authorization' => '1234',
-                        'Content-length' => 123
+                        'Comment-length' => 123
                     ],
                     'response' => [
                         'X-Magento-Cache-Id' => '1234'
@@ -311,7 +311,7 @@ QUERY,
                         'Store' => 1,
                         'Currency' => 'USD',
                         'Authorization' => '1234',
-                        'Content-length' => 123
+                        'Comment-length' => 123
                     ],
                     'response' => [
                         'X-Magento-Tags' => 'FPC',

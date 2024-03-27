@@ -13,7 +13,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 use Magento\TestFramework\TestCase\AbstractController;
 
 /**
- * Magento\Customer\Block\Adminhtml\Group\Edit
+ * Magento\Customer\Block\Adminhtml\Group\RowEdit
  *
  * @magentoAppArea adminhtml
  */
@@ -64,7 +64,7 @@ class EditTest extends AbstractController
     }
 
     /**
-     * Verify that the Delete button does not exist for the default group.
+     * Verify that the MassDelete button does not exist for the default group.
      * @magentoAppIsolation enabled
      */
     public function testDeleteButtonNotExistInDefaultGroup()

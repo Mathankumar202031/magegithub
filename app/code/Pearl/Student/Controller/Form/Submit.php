@@ -44,6 +44,9 @@ class Submit implements ActionInterface
      */
     protected $resultFactory;
 
+    /**
+     * @var RedirectInterface
+     */
     protected $redirect;
     protected $urlInterface;
 
@@ -80,6 +83,7 @@ class Submit implements ActionInterface
     {
 
         $data = (array) $this->context->getRequest()->getPost();
+        print_r($data);
             $area_of_interest = implode(",", $data['area_of_interest']);
             $data['area_of_interest'] = $area_of_interest;
         if ($data) {
@@ -94,7 +98,6 @@ class Submit implements ActionInterface
                     'url' => $url,
                     'link_text'=>'Student List'
                 ]);
-
         }catch (\Exception $e) {
             $this->messageManager->addErrorMessage($e, __("We can't submit your request, Please try again."));
         }

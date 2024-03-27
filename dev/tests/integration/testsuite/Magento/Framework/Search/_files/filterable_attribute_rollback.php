@@ -25,7 +25,7 @@ $registry->unregister('isSecureArea');
 $registry->register('isSecureArea', true);
 
 $selectOptions->setAttributeFilter($attribute->getId());
-/* Delete simple products per each select(dropdown) option */
+/* MassDelete simple products per each select(dropdown) option */
 foreach ($selectOptions as $option) {
     /** @var $product \Magento\Catalog\Model\Product */
     $product = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->create(

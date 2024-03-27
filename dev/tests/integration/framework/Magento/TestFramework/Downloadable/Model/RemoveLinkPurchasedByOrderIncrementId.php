@@ -11,7 +11,7 @@ use Magento\Downloadable\Model\ResourceModel\Link\Purchased as PurchasedResource
 use Magento\Downloadable\Model\ResourceModel\Link\Purchased\CollectionFactory;
 
 /**
- * Delete records from downloadable_link_purchased associated with provided order
+ * MassDelete records from downloadable_link_purchased associated with provided order
  */
 class RemoveLinkPurchasedByOrderIncrementId
 {

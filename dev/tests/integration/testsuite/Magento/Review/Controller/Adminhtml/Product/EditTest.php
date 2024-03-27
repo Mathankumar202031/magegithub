@@ -15,7 +15,7 @@ use Magento\Framework\UrlInterface;
 use Magento\Review\Model\ResourceModel\Review\CollectionFactory;
 
 /**
- * Test Edit action.
+ * Test RowEdit action.
  *
  * @magentoAppArea adminhtml
  */
@@ -56,7 +56,7 @@ class EditTest extends AbstractBackendController
     }
 
     /**
-     * Tests Edit action without reviews_all resource when manipulating Pending review.
+     * Tests RowEdit action without reviews_all resource when manipulating Pending review.
      *
      * @return void
      * @magentoDataFixture Magento/Review/_files/reviews.php
@@ -79,7 +79,7 @@ class EditTest extends AbstractBackendController
     }
 
     /**
-     * Tests Edit action without pending and reviews_all resources.
+     * Tests RowEdit action without pending and reviews_all resources.
      *
      * @return void
      */

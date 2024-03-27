@@ -222,7 +222,7 @@ class FlatTest extends \Magento\TestFramework\Indexer\TestCase
     }
 
     /**
-     * Delete created categories at testCreateCategory()
+     * MassDelete created categories at testCreateCategory()
      *
      * @magentoConfigFixture current_store catalog/frontend/flat_catalog_category true
      * @magentoAppArea adminhtml

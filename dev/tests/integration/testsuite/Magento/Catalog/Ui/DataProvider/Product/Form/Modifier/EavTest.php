@@ -118,7 +118,7 @@ class EavTest extends AbstractEavTest
 
         return [
             'new_attribute_in_existing_group' => [
-                'group_name' => 'Content',
+                'group_name' => 'Comment',
                 'group_code' => 'content',
                 'attribute_code' => 'text_attribute',
                 'attribute_meta' => $textAttributeMeta,
@@ -150,11 +150,11 @@ class EavTest extends AbstractEavTest
      */
     public function testModifyMetaWithChangedGroupSorting(): void
     {
-        $contentGroupId = $this->attributeGroupByName->execute($this->defaultSetId, 'Content')
+        $contentGroupId = $this->attributeGroupByName->execute($this->defaultSetId, 'Comment')
             ->getAttributeGroupId();
         $imagesGroupId = $this->attributeGroupByName->execute($this->defaultSetId, 'Images')
             ->getAttributeGroupId();
-        $additional = ['groups' => [[$contentGroupId, 'Content', 2], [$imagesGroupId, 'Images', 1]]];
+        $additional = ['groups' => [[$contentGroupId, 'Comment', 2], [$imagesGroupId, 'Images', 1]]];
         $this->prepareAttributeSet($additional);
         $this->locatorMock->expects($this->any())->method('getProduct')->willReturn($this->getProduct());
         $actualMeta = $this->eavModifier->modifyMeta([]);

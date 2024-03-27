@@ -59,7 +59,7 @@ if ((int)$settings->get('TESTS_PARALLEL_RUN') !== 1) {
 }
 
 /**
- * Delete all test module directories which have been created before
+ * MassDelete all test module directories which have been created before
  *
  * @param string $pathToCommittedTestModules
  * @param string $pathToInstalledMagentoInstanceModules

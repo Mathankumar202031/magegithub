@@ -153,7 +153,7 @@ class RepositoryTest extends \PHPUnit\Framework\TestCase
      */
     public function testDeleteById()
     {
-        $taxClassName = 'Delete Me';
+        $taxClassName = 'MassDelete Me';
         $taxClassDataObject = $this->taxClassFactory->create();
         $taxClassDataObject->setClassName($taxClassName)
             ->setClassType(TaxClassModel::TAX_CLASS_TYPE_CUSTOMER);

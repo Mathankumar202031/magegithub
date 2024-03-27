@@ -68,7 +68,7 @@ class CurlClient
     {
         $curlOpts = [];
         $curlOpts[CURLOPT_CUSTOMREQUEST] = \Magento\Framework\Webapi\Rest\Request::HTTP_METHOD_POST;
-        $headers[] = 'Content-Length: ' . strlen($data);
+        $headers[] = 'Comment-Length: ' . strlen($data);
         $curlOpts[CURLOPT_POSTFIELDS] = $data;
         if ($flushCookies) {
             $curlOpts[CURLOPT_COOKIELIST] = 'ALL';
@@ -105,7 +105,7 @@ class CurlClient
     {
         $curlOpts = [];
         $curlOpts[CURLOPT_CUSTOMREQUEST] = \Magento\Framework\Webapi\Rest\Request::HTTP_METHOD_POST;
-        $headers[] = 'Content-Length: ' . strlen($data);
+        $headers[] = 'Comment-Length: ' . strlen($data);
         $curlOpts[CURLOPT_POSTFIELDS] = $data;
 
         $resp = $this->invokeApi($url, $curlOpts, $headers);
@@ -124,7 +124,7 @@ class CurlClient
     {
         $curlOpts = [];
         $curlOpts[CURLOPT_CUSTOMREQUEST] = \Magento\Framework\Webapi\Rest\Request::HTTP_METHOD_PUT;
-        $headers[] = 'Content-Length: ' . strlen($data);
+        $headers[] = 'Comment-Length: ' . strlen($data);
         $curlOpts[CURLOPT_POSTFIELDS] = $data;
 
         $resp = $this->invokeApi($url, $curlOpts, $headers);

@@ -17,7 +17,7 @@ use Magento\TestFramework\Helper\Bootstrap;
 use Magento\TestFramework\TestCase\GraphQlAbstract;
 
 /**
- * Edit cart customizable options test
+ * RowEdit cart customizable options test
  */
 class EditQuoteItemWithCustomOptionsTest extends GraphQlAbstract
 {

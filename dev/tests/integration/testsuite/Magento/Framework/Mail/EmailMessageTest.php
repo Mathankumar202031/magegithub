@@ -97,7 +97,7 @@ class EmailMessageTest extends TestCase
     {
         return [
             [
-                'Content Test',
+                'Comment Test',
                 MimeInterface::TYPE_TEXT
             ], [
 
@@ -169,7 +169,7 @@ class EmailMessageTest extends TestCase
         $message = $this->messageFactory->create($data);
 
         $this->assertStringContainsString($content, $message->toString());
-        $this->assertStringContainsString('Content-Type: ' . $type, $message->toString());
+        $this->assertStringContainsString('Comment-Type: ' . $type, $message->toString());
         $senderString = 'Sender: =?utf-8?Q?'
             . str_replace(' ', '=20', $sender->getName())
             . '?= <'
@@ -196,7 +196,7 @@ class EmailMessageTest extends TestCase
             . '>';
         $this->assertStringContainsString($ccString, $message->toString());
         $this->assertStringContainsString('Bcc: ' . $bcc[0]->getEmail(), $message->toString());
-        $contentDescription = 'Content-Description: =?UTF-8?Q?'
+        $contentDescription = 'Comment-Description: =?UTF-8?Q?'
             . str_replace(' ', '=20', $this->description)
             . '?=';
         $this->assertStringContainsString($contentDescription, $message->toString());
@@ -262,8 +262,8 @@ class EmailMessageTest extends TestCase
         $message = $this->messageFactory->create($data);
 
         $this->assertStringContainsString($this->getXmlContent(), $message->toString());
-        $this->assertStringContainsString('Content-Type: ' . self::XML_TYPE, $message->toString());
-        $contentDisposition = 'Content-Disposition: ' . MimeInterface::DISPOSITION_ATTACHMENT
+        $this->assertStringContainsString('Comment-Type: ' . self::XML_TYPE, $message->toString());
+        $contentDisposition = 'Comment-Disposition: ' . MimeInterface::DISPOSITION_ATTACHMENT
             . '; filename="' . self::ATTACHMENT_FILE_NAME . '"';
         $this->assertStringContainsString($contentDisposition, $message->toString());
     }

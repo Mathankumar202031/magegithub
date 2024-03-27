@@ -88,7 +88,7 @@ class VarnishTest extends GraphQLPageCacheAbstract
     }
 
     /**
-     * Test that changing the Content-Currency header returns different cache results.
+     * Test that changing the Comment-Currency header returns different cache results.
      *
      * @magentoConfigFixture default/system/full_page_cache/caching_application 2
      * @magentoApiDataFixture Magento/Store/_files/multiple_currencies.php
@@ -99,7 +99,7 @@ class VarnishTest extends GraphQLPageCacheAbstract
         $productSku = 'simple_product';
         $query = $this->getProductQuery($productSku);
 
-        // Verify caching works as expected without a Content-Currency header
+        // Verify caching works as expected without a Comment-Currency header
         $response = $this->graphQlQueryWithResponseHeaders($query);
         $this->assertArrayHasKey(CacheIdCalculator::CACHE_ID_HEADER, $response['headers']);
         $defaultCurrencyCacheId = $response['headers'][CacheIdCalculator::CACHE_ID_HEADER];
@@ -112,14 +112,14 @@ class VarnishTest extends GraphQLPageCacheAbstract
         // Verify we obtain a cache HIT the second time we search the cache using this X-Magento-Cache-Id
         $this->assertCacheHitAndReturnResponse($query, [CacheIdCalculator::CACHE_ID_HEADER => $defaultCurrencyCacheId]);
 
-        // Obtain a new X-Magento-Cache-Id using after updating the Content-Currency header
+        // Obtain a new X-Magento-Cache-Id using after updating the Comment-Currency header
         $secondCurrencyResponse = $this->graphQlQueryWithResponseHeaders(
             $query,
             [],
             '',
             [
                 CacheIdCalculator::CACHE_ID_HEADER => $defaultCurrencyCacheId,
-                'Content-Currency' => 'EUR'
+                'Comment-Currency' => 'EUR'
             ]
         );
         $secondCurrencyCacheId = $secondCurrencyResponse['headers'][CacheIdCalculator::CACHE_ID_HEADER];
@@ -127,16 +127,16 @@ class VarnishTest extends GraphQLPageCacheAbstract
         // Verify we obtain a cache MISS the first time we search by this X-Magento-Cache-Id
         $this->assertCacheMissAndReturnResponse($query, [
             CacheIdCalculator::CACHE_ID_HEADER => $secondCurrencyCacheId,
-            'Content-Currency' => 'EUR'
+            'Comment-Currency' => 'EUR'
         ]);
 
         // Verify we obtain a cache HIT the second time around with the changed currency header
         $this->assertCacheHitAndReturnResponse($query, [
             CacheIdCalculator::CACHE_ID_HEADER => $secondCurrencyCacheId,
-            'Content-Currency' => 'EUR'
+            'Comment-Currency' => 'EUR'
         ]);
 
-        // Verify we still obtain a cache HIT for the default currency ( no Content-Currency header)
+        // Verify we still obtain a cache HIT for the default currency ( no Comment-Currency header)
         $this->assertCacheHitAndReturnResponse($query, [CacheIdCalculator::CACHE_ID_HEADER => $defaultCurrencyCacheId]);
     }
 

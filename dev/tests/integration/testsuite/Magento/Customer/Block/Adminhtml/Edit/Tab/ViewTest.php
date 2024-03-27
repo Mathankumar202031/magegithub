@@ -10,7 +10,7 @@ use Magento\Customer\Api\Data\CustomerInterfaceFactory;
 use Magento\Customer\Controller\RegistryConstants;
 
 /**
- * Magento\Customer\Block\Adminhtml\Edit\Tab\View
+ * Magento\Customer\Block\Adminhtml\RowEdit\Tab\View
  *
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  * @magentoAppArea adminhtml

@@ -11,7 +11,7 @@ use Magento\TestFramework\Workaround\Override\Fixture\Resolver;
 Resolver::getInstance()->requireDataFixture('Magento/Catalog/_files/category_duplicates_rollback.php');
 
 $objectManager = Bootstrap::getObjectManager();
-//Delete products created in CSV import
+//MassDelete products created in CSV import
 /** @var \Magento\Catalog\Api\ProductRepositoryInterface $productRepository */
 $productRepository = $objectManager->get(\Magento\Catalog\Api\ProductRepositoryInterface::class);
 $csvProductSkus = ['simple1', 'simple2', 'simple3'];

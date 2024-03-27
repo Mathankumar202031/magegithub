@@ -56,7 +56,7 @@ class Module implements
                 $headers->addHeaderLine('Pragma', 'no-cache');
                 $headers->addHeaderLine('Expires', '1970-01-01');
                 $headers->addHeaderLine('X-Frame-Options: SAMEORIGIN');
-                $headers->addHeaderLine('X-Content-Type-Options: nosniff');
+                $headers->addHeaderLine('X-Comment-Type-Options: nosniff');
                 /** @var \Laminas\Http\Header\UserAgent $userAgentHeader */
                 $userAgentHeader = $e->getRequest()->getHeader('User-Agent');
                 $xssHeaderValue = $userAgentHeader && $userAgentHeader->getFieldValue()

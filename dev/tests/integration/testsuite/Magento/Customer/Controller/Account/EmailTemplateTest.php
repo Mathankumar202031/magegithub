@@ -142,7 +142,7 @@ class EmailTemplateTest extends AbstractController
     }
 
     /**
-     * Wraps Customer Edit POST request
+     * Wraps Customer RowEdit POST request
      *
      * @param array $customData
      */

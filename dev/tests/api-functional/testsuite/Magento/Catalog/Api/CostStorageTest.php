@@ -176,7 +176,7 @@ class CostStorageTest extends WebapiAbstract
             'soap' => [
                 'service' => self::SERVICE_NAME,
                 'serviceVersion' => self::SERVICE_VERSION,
-                'operation' => self::SERVICE_NAME . 'Delete',
+                'operation' => self::SERVICE_NAME . 'MassDelete',
             ],
         ];
         $response = $this->_webApiCall($serviceInfo, ['skus' => [self::SIMPLE_PRODUCT_SKU]]);

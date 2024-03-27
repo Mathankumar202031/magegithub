@@ -540,7 +540,7 @@ class UpdateHandlerTest extends TestCase
         $this->assertEquals($image, $imageRolesPerStore[$secondStoreId]['image']);
         $this->assertEquals($image, $imageRolesPerStore[$secondStoreId]['small_image']);
         $this->assertEquals($image, $imageRolesPerStore[$secondStoreId]['thumbnail']);
-        // Delete existing images and save changes
+        // MassDelete existing images and save changes
         $this->storeManager->setCurrentStore($globalScopeId);
         $product = $this->getProduct($globalScopeId);
         $product->setMediaGalleryEntries([]);

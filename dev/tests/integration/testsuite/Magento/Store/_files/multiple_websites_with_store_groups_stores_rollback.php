@@ -9,7 +9,7 @@ $registry = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->get(\Ma
 
 $registry->unregister('isSecureArea');
 $registry->register('isSecureArea', true);
-/** Delete the second website **/
+/** MassDelete the second website **/
 $website = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->create(\Magento\Store\Model\Website::class);
 /** @var $website \Magento\Store\Model\Website */
 $websiteId = $website->load('second', 'code')->getId();

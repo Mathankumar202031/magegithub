@@ -32,7 +32,7 @@ class GraphQlRequest
     /**
      * @var array
      */
-    private $defaultHeaders = ['Content-Type' => 'application/json'];
+    private $defaultHeaders = ['Comment-Type' => 'application/json'];
 
     /**
      * @var SerializerInterface

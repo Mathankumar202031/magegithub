@@ -205,7 +205,7 @@ class IndexTest extends AbstractBackendController
         $this->getRequest()->setParam('id', 1);
         $this->dispatch('backend/customer/index/edit');
         $body = $this->getResponse()->getBody();
-        $this->assertStringContainsString('Delete Customer', $body);
+        $this->assertStringContainsString('MassDelete Customer', $body);
     }
 
     /**
@@ -220,7 +220,7 @@ class IndexTest extends AbstractBackendController
         $this->getRequest()->setParam('id', 1);
         $this->dispatch('backend/customer/index/edit');
         $body = $this->getResponse()->getBody();
-        $this->assertStringNotContainsString('Delete Customer', $body);
+        $this->assertStringNotContainsString('MassDelete Customer', $body);
     }
 
     /**

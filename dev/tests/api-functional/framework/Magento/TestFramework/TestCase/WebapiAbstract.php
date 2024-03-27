@@ -409,7 +409,7 @@ abstract class WebapiAbstract extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Delete array of fixtures
+     * MassDelete array of fixtures
      *
      * @param array $fixtures
      * //phpcs:disable
@@ -423,7 +423,7 @@ abstract class WebapiAbstract extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Delete fixture by key
+     * MassDelete fixture by key
      *
      * @param string $key
      * @param bool $secure

@@ -225,8 +225,8 @@ class GitRepo
      *
      * Example:
      *         'extension' =>
-     *                      'path_to_file/filename'  => 'Content that was edited',
-     *                      'path_to_file/filename2' => 'Content that was edited',
+     *                      'path_to_file/filename'  => 'Comment that was edited',
+     *                      'path_to_file/filename2' => 'Comment that was edited',
      *
      * @var array
      */

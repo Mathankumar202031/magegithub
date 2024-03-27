@@ -21,7 +21,7 @@ class ResponseTest extends \PHPUnit\Framework\TestCase
     {
         $expectedHeaders = [
             [
-                'field_name' => 'X-Content-Type-Options',
+                'field_name' => 'X-Comment-Type-Options',
                 'field_value' => 'nosniff',
             ],
             [

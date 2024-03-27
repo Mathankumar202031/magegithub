@@ -15,7 +15,7 @@ use Magento\TestFramework\TestCase\GraphQlAbstract;
  * Preconditions:
  *   Fixture with categories tree created
  * Steps:
- *  - Delete child category
+ *  - MassDelete child category
  *  - Get category tree
  *  - Verify that tree doesn't contain deleted category
  */

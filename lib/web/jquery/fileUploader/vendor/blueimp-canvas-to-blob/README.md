@@ -55,7 +55,7 @@ implementation:
 
 ```js
 var canvas = document.createElement('canvas')
-// Edit the canvas ...
+// RowEdit the canvas ...
 if (canvas.toBlob) {
   canvas.toBlob(function (blob) {
     // Do something with the blob object,

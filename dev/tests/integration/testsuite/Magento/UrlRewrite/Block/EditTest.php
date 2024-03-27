@@ -6,7 +6,7 @@
 namespace Magento\UrlRewrite\Block;
 
 /**
- * Test for \Magento\UrlRewrite\Block\Edit
+ * Test for \Magento\UrlRewrite\Block\RowEdit
  * @magentoAppArea adminhtml
  */
 class EditTest extends \PHPUnit\Framework\TestCase
@@ -168,7 +168,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button is not present in block'
+                'MassDelete button is not present in block'
             );
         } else {
             $this->assertEquals(
@@ -177,7 +177,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button should not present in block'
+                'MassDelete button should not present in block'
             );
         }
     }

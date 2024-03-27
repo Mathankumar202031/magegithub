@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+        <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+            <menu>
+                <add id="Pearl_Student::blogmanager" translate="title" title="student registration" module="Pearl_Student" sortOrder="10" resource="Pearl_Student::blogmanager"/>
+                <add id="Pearl_Student::manage" translate="title" title="registration" module="Pearl_Student" sortOrder="10" resource="Pearl_Student::manage" parent="Pearl_Student::blogmanager" action="pearl/manage/"/>
+            </menu>
+        </config>
+
+<!--        <add  id="Pearl_Student::ninja"  title="Ninja Hattori" module="Pearl_Student" sortOrder="10" resource="Pearl_Student::ninja"/>-->
+<!--        <add  id="Pearl_Student::velu"  title="Ninja black" module="Pearl_Student" sortOrder="10" resource="Pearl_Student::ninja"/>-->
+<!--        <add  id="Pearl_Student::ninjavelu"  title="RangWell" module="Pearl_Student" sortOrder="10" resource="Pearl_Student::manage" parent="Pearl_Student::velu" action="pearl/manage/index"/>-->
+<!--        <add  id="Pearl_Student::black"  title="black" module="Pearl_Student" sortOrder="10" resource="Pearl_Student::manage" parent="Pearl_Student::ninja" action="pearl/manage/index"/>-->
+<!--        <add  id="Pearl_Student::blacktitle"  title="blacktitle" module="Pearl_Student" sortOrder="10" resource="Pearl_Student::manage" parent="Pearl_Student::black" />-->
+<!--        <add  id="Pearl_Student::white"  title="white" module="Pearl_Student" sortOrder="20" resource="Pearl_Student::manage" parent="Pearl_Student::ninja" action="pearl/manage/index"/>-->
+<!--        <add id="Pearl_Student::parent" title="Menu" module="Pearl_Student" sortOrder="100" resource="Pearl_Student::parent"/>-->
+<!--        <add id="Pearl_Student::test" title="First Menu" module="Pearl_Student" sortOrder="11" action="router/controller/action" resource="Pearl_Student::test" parent="Pearl_Student::parent"/>-->
+<!--        <add id="Pearl_Student::search" title="Search Management" module="Pearl_Student" sortOrder="50" parent="Order_Summary::menu" resource="Pearl_Student::search"/>-->
+<!--        <add id="Pearl_Student::search_index" title="Search Indexes" module="Pearl_Student" sortOrder="10" parent="Pearl_Student::search" action="pearl/manage/" resource="Pearl_Student::search_index"/>-->
+<!--        <add id="Pearl_Student::search_score_rule" title="Score Boost Rules" module="Pearl_Student" sortOrder="15" parent="Pearl_Student::search" action="search/scoreRule" resource="Pearl_Student::search" />-->
+

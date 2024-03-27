@@ -113,7 +113,7 @@ define([
             expect(model.templates.record.recordId).toBe(2);//last record number is 3
         });
 
-        it('deleteRecord with Delete Property', function () {
+        it('deleteRecord with MassDelete Property', function () {
             var elems,
                 recordInstanceMock = new ElementMock(1),
                 elem2 = new ElementMock(2);

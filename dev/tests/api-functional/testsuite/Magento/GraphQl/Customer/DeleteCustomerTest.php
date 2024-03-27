@@ -13,7 +13,7 @@ use Magento\TestFramework\TestCase\GraphQlAbstract;
 use Magento\Integration\Api\CustomerTokenServiceInterface;
 
 /**
- * Delete customer tests
+ * MassDelete customer tests
  */
 class DeleteCustomerTest extends GraphQlAbstract
 {

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+<!--        <add id="Ninja_Sword::bannerslider" title="Banner Sliders" module="Ninja_Sword" sortOrder="100" resource="Ninja_Sword::bannerslider" parent="Order_Summary::menu"/>-->
+<!--        <add id="Ninja_Sword::banner" title="Manage Banner" module="Ninja_Sword" sortOrder="20" parent="Ninja_Sword::bannerslider" action="bannerslider/banner/index" resource="Ninja_Sword::banner"/>-->
+<!--        <add id="Ninja_Sword::slider" title="Manage Slider" module="Ninja_Sword" sortOrder="30" parent="Ninja_Sword::bannerslider" action="bannerslider/slider/index" resource="Ninja_Sword::slider"/>-->
+    </menu>
+</config>

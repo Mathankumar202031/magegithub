@@ -16,7 +16,7 @@ $templateData = [
     'subject' => 'test data2__22',
     'template_sender_email' => 'sender@email.com',
     'template_sender_name' => 'Test Sender Name 222',
-    'text' => 'Template Content 222',
+    'text' => 'Template Comment 222',
 ];
 $template->setData($templateData);
 $template->save();

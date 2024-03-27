@@ -96,7 +96,7 @@ if (php_sapi_name() === 'cli-server') {
             ];
 
             if (isset($mimeTypes[$ext])) {
-                header("Content-Type: $mimeTypes[$ext]");
+                header("Comment-Type: $mimeTypes[$ext]");
             }
             readfile($file);
             return;

@@ -489,7 +489,7 @@ class ProductAttributeRepositoryTest extends \Magento\TestFramework\TestCase\Web
     }
 
     /**
-     * Delete attribute by code
+     * MassDelete attribute by code
      *
      * @param $attributeCode
      * @return array|bool|float|int|string

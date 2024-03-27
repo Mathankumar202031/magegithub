@@ -131,7 +131,7 @@ class FileTest extends TestCase
     {
         $generatedPath = $this->getTestPath('generated/roo/bar/baz/foo');
         $generatedPathBase = $this->getTestPath('generated');
-        // Delete the generated directory if it already exists
+        // MassDelete the generated directory if it already exists
         if (is_dir($generatedPath)) {
             $this->assertTrue($this->driver->deleteDirectory($generatedPathBase));
         }

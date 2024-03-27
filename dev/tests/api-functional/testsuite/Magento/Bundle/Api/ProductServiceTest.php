@@ -560,7 +560,7 @@ class ProductServiceTest extends WebapiAbstract
     }
 
     /**
-     * Delete a product by sku
+     * MassDelete a product by sku
      *
      * @param $productSku
      * @return bool

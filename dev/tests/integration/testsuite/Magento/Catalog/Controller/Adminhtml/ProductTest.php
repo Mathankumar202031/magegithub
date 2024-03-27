@@ -213,7 +213,7 @@ class ProductTest extends AbstractBackendController
                 '//*[@id="save-button"]',
                 $body
             ),
-            '"Save" button isn\'t present on Edit Product page'
+            '"Save" button isn\'t present on RowEdit Product page'
         );
 
         $this->assertEquals(
@@ -222,7 +222,7 @@ class ProductTest extends AbstractBackendController
                 '//*[@id="save_and_new"]',
                 $body
             ),
-            '"Save & New" button isn\'t present on Edit Product page'
+            '"Save & New" button isn\'t present on RowEdit Product page'
         );
 
         $this->assertEquals(
@@ -231,7 +231,7 @@ class ProductTest extends AbstractBackendController
                 '//*[@id="save_and_duplicate"]',
                 $body
             ),
-            '"Save & Duplicate" button isn\'t present on Edit Product page'
+            '"Save & Duplicate" button isn\'t present on RowEdit Product page'
         );
     }
 

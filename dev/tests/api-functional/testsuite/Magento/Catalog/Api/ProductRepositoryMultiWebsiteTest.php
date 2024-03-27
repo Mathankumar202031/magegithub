@@ -112,7 +112,7 @@ class ProductRepositoryMultiWebsiteTest extends WebapiAbstract
     }
 
     /**
-     * Delete Product
+     * MassDelete Product
      *
      * @param string $sku
      * @return boolean

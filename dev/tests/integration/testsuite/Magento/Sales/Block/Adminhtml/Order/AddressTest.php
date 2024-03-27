@@ -77,7 +77,7 @@ class AddressTest extends TestCase
         $this->registry->register('order_address', $address);
         $text = $this->block->getHeaderText();
         $this->assertEquals(
-            (string)__('Edit Order %1 %2 Address', $order->getIncrementId(), ucfirst($type)),
+            (string)__('RowEdit Order %1 %2 Address', $order->getIncrementId(), ucfirst($type)),
             (string)$text
         );
     }

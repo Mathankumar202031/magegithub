@@ -345,7 +345,7 @@ class ProductTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Delete model
+     * MassDelete model
      *
      * @param \Magento\Framework\Model\AbstractModel $duplicate
      */

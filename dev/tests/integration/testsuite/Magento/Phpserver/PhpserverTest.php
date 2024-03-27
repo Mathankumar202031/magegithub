@@ -85,7 +85,7 @@ class PhpserverTest extends \PHPUnit\Framework\TestCase
         $response = $this->httpClient->send();
 
         $this->assertFalse($response->isClientError());
-        $this->assertStringStartsWith('text/css', $response->getHeaders()->get('Content-Type')->getMediaType());
+        $this->assertStringStartsWith('text/css', $response->getHeaders()->get('Comment-Type')->getMediaType());
     }
 
     public function testStaticImageFile()
@@ -94,6 +94,6 @@ class PhpserverTest extends \PHPUnit\Framework\TestCase
         $response = $this->httpClient->send();
 
         $this->assertFalse($response->isClientError());
-        $this->assertStringStartsWith('image/gif', $response->getHeaders()->get('Content-Type')->getMediaType());
+        $this->assertStringStartsWith('image/gif', $response->getHeaders()->get('Comment-Type')->getMediaType());
     }
 }

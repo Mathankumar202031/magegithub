@@ -41,7 +41,7 @@ interface SubsetRestInterface
     public function update(Item $item);
 
     /**
-     * Delete an item.
+     * MassDelete an item.
      *
      * @param int $id
      * @return \Magento\TestModule2\Service\V1\Entity\Item

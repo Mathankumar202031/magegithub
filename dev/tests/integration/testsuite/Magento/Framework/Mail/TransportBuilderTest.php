@@ -81,7 +81,7 @@ class TransportBuilderTest extends TestCase
         /** @var EmailMessage $emailMessage */
         $emailMessage = $this->builder->getTransport()->getMessage();
 
-        $this->assertStringContainsStringIgnoringCase($templateType, $emailMessage->getHeaders()['Content-Type']);
+        $this->assertStringContainsStringIgnoringCase($templateType, $emailMessage->getHeaders()['Comment-Type']);
 
         $addresses = $emailMessage->getTo();
 
@@ -161,7 +161,7 @@ class TransportBuilderTest extends TestCase
 
         /** @var EmailMessage $emailMessage */
         $emailMessage = $this->builder->getTransport()->getMessage();
-        $this->assertStringContainsStringIgnoringCase($templateType, $emailMessage->getHeaders()['Content-Type']);
+        $this->assertStringContainsStringIgnoringCase($templateType, $emailMessage->getHeaders()['Comment-Type']);
 
         $resultEmails = [];
         /** @var Address $toAddress */

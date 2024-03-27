@@ -68,7 +68,7 @@ class EntityAbstractTest extends \PHPUnit\Framework\TestCase
         $bunch = $dataSourceModel->getNextBunch();
         $this->assertEquals($expected, $bunch[0]);
 
-        //Delete created bunch from DB
+        //MassDelete created bunch from DB
         $dataSourceModel->cleanBunches();
     }
 }

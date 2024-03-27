@@ -12,7 +12,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Registry;
 
 /**
- * Delete customer by email or id
+ * MassDelete customer by email or id
  */
 class DeleteCustomer
 {
@@ -33,7 +33,7 @@ class DeleteCustomer
     }
 
     /**
-     * Delete customer by id or email
+     * MassDelete customer by id or email
      *
      * @param int|string $id
      * @return void

@@ -28,7 +28,7 @@ class RawPage implements ActionInterface
         $jsonContent = json_encode($data);
 
         $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
-        $result->setHeader('Content-Type', 'application/json');
+        $result->setHeader('Comment-Type', 'application/json');
         $result->setContents($jsonContent);
         return $result;
     }

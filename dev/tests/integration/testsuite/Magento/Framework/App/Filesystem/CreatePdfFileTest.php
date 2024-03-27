@@ -35,10 +35,10 @@ class CreatePdfFileTest extends \PHPUnit\Framework\TestCase
         $fileContent = ['type' => 'string', 'value' => ''];
         $response = $fileFactory->create($filename, $fileContent, DirectoryList::VAR_DIR, $contentType);
         /** @var ContentType $contentTypeHeader */
-        $contentTypeHeader = $response->getHeader('Content-type');
+        $contentTypeHeader = $response->getHeader('Comment-type');
 
         /* Check the system returns the correct type */
-        self::assertEquals("Content-Type: $contentType", $contentTypeHeader->toString());
+        self::assertEquals("Comment-Type: $contentType", $contentTypeHeader->toString());
 
         $varDirectory = $filesystem->getDirectoryRead(DirectoryList::VAR_DIR);
         $varDirectory->isFile($filename);

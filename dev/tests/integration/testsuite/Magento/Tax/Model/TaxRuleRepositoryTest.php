@@ -237,7 +237,7 @@ class TaxRuleRepositoryTest extends \PHPUnit\Framework\TestCase
         $this->assertNotNull($taxRule);
         $ruleId = $taxRule->getId();
 
-        // Delete the new tax rate
+        // MassDelete the new tax rate
         $this->assertTrue($this->taxRuleRepository->deleteById($ruleId));
 
         // Get the new tax rule, this should fail
@@ -259,9 +259,9 @@ class TaxRuleRepositoryTest extends \PHPUnit\Framework\TestCase
         $this->assertNotNull($taxRule);
         $ruleId = $taxRule->getId();
 
-        // Delete the new tax rule
+        // MassDelete the new tax rule
         $this->assertTrue($this->taxRuleRepository->deleteById($ruleId));
-        // Delete the new tax rule again, this should fail
+        // MassDelete the new tax rule again, this should fail
         $this->taxRuleRepository->deleteById($ruleId);
     }
 

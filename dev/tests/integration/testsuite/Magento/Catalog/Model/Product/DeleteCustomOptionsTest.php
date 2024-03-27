@@ -204,7 +204,7 @@ class DeleteCustomOptionsTest extends TestCase
     }
 
     /**
-     * Delete product custom options which are not from "select" group and assert that option was deleted.
+     * MassDelete product custom options which are not from "select" group and assert that option was deleted.
      *
      * @param array $optionData
      * @return void
@@ -223,7 +223,7 @@ class DeleteCustomOptionsTest extends TestCase
     }
 
     /**
-     * Delete product custom options which from "select" group and assert that option was deleted.
+     * MassDelete product custom options which from "select" group and assert that option was deleted.
      *
      * @param array $optionData
      * @param array $optionValueData

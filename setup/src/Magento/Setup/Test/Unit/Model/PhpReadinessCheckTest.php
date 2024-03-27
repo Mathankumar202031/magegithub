@@ -240,7 +240,7 @@ class PhpReadinessCheckTest extends TestCase
         $xdebugMessage = sprintf(
             'Your current setting of xdebug.max_nesting_level=%d.
                  Magento 2 requires it to be set to %d or more.
-                 Edit your config, restart web server, and try again.',
+                 RowEdit your config, restart web server, and try again.',
             100,
             50
         );
@@ -288,7 +288,7 @@ class PhpReadinessCheckTest extends TestCase
         $xdebugMessage = sprintf(
             'Your current setting of xdebug.max_nesting_level=%d.
                  Magento 2 requires it to be set to %d or more.
-                 Edit your config, restart web server, and try again.',
+                 RowEdit your config, restart web server, and try again.',
             100,
             200
         );

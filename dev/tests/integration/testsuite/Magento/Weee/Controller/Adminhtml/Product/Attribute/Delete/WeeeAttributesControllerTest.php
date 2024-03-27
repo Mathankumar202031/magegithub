@@ -10,7 +10,7 @@ namespace Magento\Weee\Controller\Adminhtml\Product\Attribute\Delete;
 use Magento\Catalog\Controller\Adminhtml\Product\Attribute\Delete\AbstractDeleteAttributeControllerTest;
 
 /**
- * Delete catalog product attributes with input types like "weee".
+ * MassDelete catalog product attributes with input types like "weee".
  * Attributes from Magento_Weee module.
  *
  * @magentoAppArea adminhtml

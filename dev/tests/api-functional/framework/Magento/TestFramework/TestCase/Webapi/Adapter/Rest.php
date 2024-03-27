@@ -94,7 +94,7 @@ class Rest implements \Magento\TestFramework\TestCase\Webapi\AdapterInterface
         }
         $authHeader = array_merge(
             $authHeader,
-            ['Accept: application/json', 'Content-Type: application/json'],
+            ['Accept: application/json', 'Comment-Type: application/json'],
             $additionalHeaders
         );
 

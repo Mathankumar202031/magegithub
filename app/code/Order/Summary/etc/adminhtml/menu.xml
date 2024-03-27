@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Order_Summary::menu" title="Example Title" module="Order_Summary" translate="title" sortOrder="70" resource="Order_Summary::menu"/>
+<!--        <add id="Order_Summary::search" title="Search Management" module="Order_Summary" sortOrder="50" parent="Pearl_Student::menu" resource="Order_Summary::search"/>-->
+<!--        <add id="Order_Summary::search_index" title="Search Indexes" module="Order_Summary" sortOrder="10" parent="Order_Summary::search" action="search/index" resource="Order_Summary::search_index"/>-->
+<!--        <add id="Order_Summary::search_score_rule" title="Score Boost Rules" module="Order_Summary" sortOrder="15" parent="Order_Summary::search" action="search/scoreRule" resource="Order_Summary::search_score_rule"/>-->
+    </menu>
+</config>

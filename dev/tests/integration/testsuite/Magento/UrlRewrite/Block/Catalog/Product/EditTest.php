@@ -248,7 +248,7 @@ class EditTest extends TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button is not present in product URL rewrite edit block'
+                'MassDelete button is not present in product URL rewrite edit block'
             );
         } else {
             $this->assertEquals(
@@ -257,7 +257,7 @@ class EditTest extends TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button should not present in product URL rewrite edit block'
+                'MassDelete button should not present in product URL rewrite edit block'
             );
         }
     }

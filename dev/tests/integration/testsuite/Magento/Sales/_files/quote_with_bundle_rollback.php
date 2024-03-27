@@ -10,14 +10,14 @@ $registry = $objectManager->get(\Magento\Framework\Registry::class);
 $registry->unregister('isSecureArea');
 $registry->register('isSecureArea', true);
 
-// Delete quote
+// MassDelete quote
 /** @var $quote \Magento\Quote\Model\Quote */
 $quote = $objectManager->create(\Magento\Quote\Model\Quote::class);
 $quote->load('test01', 'reserved_order_id');
 if ($quote->getId()) {
     $quote->delete();
 }
-// Delete products
+// MassDelete products
 $productSkus = ['simple-1', 'simple-2', 'bundle-product'];
 /** @var Magento\Catalog\Api\ProductRepositoryInterface $productRepository */
 $productRepository = $objectManager->get(Magento\Catalog\Api\ProductRepositoryInterface::class);

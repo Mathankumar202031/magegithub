@@ -14,14 +14,14 @@ use Magento\TestFramework\TestCase\AbstractBackendController;
 use Magento\Search\Model\ResourceModel\SynonymGroup\Collection;
 
 /**
- * Test for class \Magento\Search\Controller\Adminhtml\Synonyms\Delete
+ * Test for class \Magento\Search\Controller\Adminhtml\Synonyms\MassDelete
  *
  * @magentoAppArea adminhtml
  */
 class DeleteTest extends AbstractBackendController
 {
 
-    /** Test Delete Synonyms
+    /** Test MassDelete Synonyms
      * @magentoAppIsolation enabled
      * @magentoDbIsolation enabled
      * @magentoDataFixture Magento/Search/_files/synonym_group.php

@@ -202,7 +202,7 @@ class CategoryTest extends TestCase
                     'simple1001' => 4,
                 ]
             ],
-            'Delete product' => [
+            'MassDelete product' => [
                 [
                     'simple1002' => 1,
                     'simple1000' => 2,

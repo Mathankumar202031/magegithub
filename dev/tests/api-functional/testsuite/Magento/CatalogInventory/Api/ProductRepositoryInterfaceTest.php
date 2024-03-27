@@ -371,7 +371,7 @@ class ProductRepositoryInterfaceTest extends WebapiAbstract
     }
 
     /**
-     * Delete a product via its sku
+     * MassDelete a product via its sku
      *
      * @param string $sku
      * @return bool

@@ -84,10 +84,10 @@ class Studentdelete  implements  ActionInterface
         $url = $this->urlInterface->getUrl('student/', ['_secure' => true]);
         try {
             $data = $this->context->getRequest()->getParams();
-//            $id = $data['id'];
+            $id = $data['id'];
             if ($data) {
-//             $this->dataRepository->deleteById($id);
-                $message = __('You added <a href="'.$url.'">cart</a>');
+             $this->dataRepository->deleteById($id);
+                $message = __('You are <a href="'.$url.'">Deleted</a>');
                 $this->messageManager->addSuccess($message);
             }
         } catch (\Exception $e) {

@@ -83,7 +83,7 @@ class ProductSearchAggregationsTest extends GraphQlAbstract
      */
     public function testAggregationPriceRangesWithCurrencyHeader()
     {
-        $headerMap['Content-Currency'] = 'CNY';
+        $headerMap['Comment-Currency'] = 'CNY';
         $query = $this->getGraphQlQuery(
             '"search_product_1", "search_product_2", "search_product_3", "search_product_4" ,"search_product_5"'
         );

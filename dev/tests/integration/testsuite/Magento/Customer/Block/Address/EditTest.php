@@ -20,7 +20,7 @@ use Magento\TestFramework\Store\ExecuteInStoreContext;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests Address Edit Block
+ * Tests Address RowEdit Block
  *
  * @see \Magento\Customer\Block\Address\Edit
  *

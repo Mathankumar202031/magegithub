@@ -45,10 +45,12 @@ class OrderSummaryExtension implements ObserverInterface
             }
             $product = $observer->getProduct();
             $additionalOptions = [];
-            $additionalOptions[] = array(
-                'label' => "Sale",
-                'value' => $black
-            );
+           if (!empty($black)) {
+               $additionalOptions[] = array(
+                   'label' => "AvailableForSale",
+                   'value' => "Sale"
+               );
+           }
             $product->addCustomOption('additional_options', $this->serializer->serialize($additionalOptions));
         }
     }

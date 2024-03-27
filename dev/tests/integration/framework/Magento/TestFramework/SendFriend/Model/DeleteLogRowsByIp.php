@@ -10,7 +10,7 @@ namespace Magento\TestFramework\SendFriend\Model;
 use Magento\SendFriend\Model\ResourceModel\SendFriend as SendFriendResource;
 
 /**
- * Delete log rows by ip address
+ * MassDelete log rows by ip address
  */
 class DeleteLogRowsByIp
 {
@@ -26,7 +26,7 @@ class DeleteLogRowsByIp
     }
 
     /**
-     * Delete rows from sendfriend_log table by ip address
+     * MassDelete rows from sendfriend_log table by ip address
      *
      * @param string $ipAddress
      * @return void

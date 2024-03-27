@@ -8,7 +8,7 @@ namespace Magento\UrlRewrite\Block\Cms\Page;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test for \Magento\UrlRewrite\Block\Cms\Page\Edit
+ * Test for \Magento\UrlRewrite\Block\Cms\Page\RowEdit
  * @magentoAppArea adminhtml
  */
 class EditTest extends TestCase
@@ -198,7 +198,7 @@ class EditTest extends TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button is not present in CMS page URL rewrite edit block'
+                'MassDelete button is not present in CMS page URL rewrite edit block'
             );
         } else {
             $this->assertEquals(
@@ -207,7 +207,7 @@ class EditTest extends TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button should not present in CMS page URL rewrite edit block'
+                'MassDelete button should not present in CMS page URL rewrite edit block'
             );
         }
     }

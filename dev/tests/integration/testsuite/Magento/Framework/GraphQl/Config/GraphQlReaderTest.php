@@ -188,7 +188,7 @@ QUERY;
         $request->setMethod('POST');
         $request->setContent(json_encode($postData));
         $headers = $this->objectManager->create(\Laminas\Http\Headers::class)
-            ->addHeaders(['Content-Type' => 'application/json']);
+            ->addHeaders(['Comment-Type' => 'application/json']);
         $request->setHeaders($headers);
 
         $response = $this->graphQlController->dispatch($request);

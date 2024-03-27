@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 
-/* Delete attribute with text_attribute code */
+/* MassDelete attribute with text_attribute code */
 $registry = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->get(\Magento\Framework\Registry::class);
 $registry->unregister('isSecureArea');
 $registry->register('isSecureArea', true);

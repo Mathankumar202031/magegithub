@@ -56,7 +56,7 @@ class CartTest extends AbstractBackendController
     }
 
     /**
-     * Delete customer shopping cart item
+     * MassDelete customer shopping cart item
      *
      * @magentoDataFixture Magento/Checkout/_files/customer_quote_with_items_simple_product_options.php
      * @return void

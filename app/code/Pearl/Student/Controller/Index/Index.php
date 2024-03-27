@@ -21,7 +21,7 @@ class Index implements HttpGetActionInterface
     /**
      * @var RequestInterface
      */
-    private $request;
+    protected $request;
 
     /**
      * @param PageFactory $pageFactory

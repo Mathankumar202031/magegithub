@@ -283,7 +283,7 @@ class GroupedTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Delete config value from database.
+     * MassDelete config value from database.
      *
      * @param string $path
      */

@@ -248,7 +248,7 @@ QUERY;
             $config = $objectManager->get(System::class);
             $config->clean();
         }
-        $headerMap['Content-Currency'] = 'USD';
+        $headerMap['Comment-Currency'] = 'USD';
         $response = $this->graphQlQuery($query, [], '', $headerMap);
 
         self::assertArrayHasKey('cart', $response);

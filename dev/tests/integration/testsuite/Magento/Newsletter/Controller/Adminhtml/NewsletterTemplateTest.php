@@ -33,7 +33,7 @@ class NewsletterTemplateTest extends \Magento\TestFramework\TestCase\AbstractBac
             'subject' => 'test data2',
             'sender_email' => 'sender@email.com',
             'sender_name' => 'Test Sender Name',
-            'text' => 'Template Content',
+            'text' => 'Template Comment',
             'form_key' => $this->formKey,
         ];
         $this->getRequest()->setPostValue($post)->setMethod(\Laminas\Http\Request::METHOD_POST);

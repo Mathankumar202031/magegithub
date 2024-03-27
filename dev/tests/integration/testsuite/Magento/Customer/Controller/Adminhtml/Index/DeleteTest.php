@@ -33,7 +33,7 @@ class DeleteTest extends AbstractBackendController
     }
 
     /**
-     * Delete customer
+     * MassDelete customer
      *
      * @dataProvider deleteCustomerProvider
      * @magentoDataFixture Magento/Customer/_files/customer_sample.php
@@ -54,7 +54,7 @@ class DeleteTest extends AbstractBackendController
     }
 
     /**
-     * Delete customer provider
+     * MassDelete customer provider
      *
      * @return array
      */
@@ -89,7 +89,7 @@ class DeleteTest extends AbstractBackendController
     }
 
     /**
-     * Delete customer using backend/customer/index/delete action.
+     * MassDelete customer using backend/customer/index/delete action.
      *
      * @param array $params
      * @return void

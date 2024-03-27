@@ -145,7 +145,7 @@ class SpecialPriceStorageTest extends WebapiAbstract
     }
 
     /**
-     * Delete special price for specified store when price scope is global
+     * MassDelete special price for specified store when price scope is global
      *
      * @magentoApiDataFixture Magento/Catalog/_files/product_simple.php
      * @magentoConfigFixture default_store catalog/price/scope 0
@@ -161,7 +161,7 @@ class SpecialPriceStorageTest extends WebapiAbstract
             'soap' => [
                 'service' => self::SERVICE_NAME,
                 'serviceVersion' => self::SERVICE_VERSION,
-                'operation' => self::SERVICE_NAME . 'Delete',
+                'operation' => self::SERVICE_NAME . 'MassDelete',
             ],
         ];
 
@@ -217,7 +217,7 @@ class SpecialPriceStorageTest extends WebapiAbstract
             'soap' => [
                 'service' => self::SERVICE_NAME,
                 'serviceVersion' => self::SERVICE_VERSION,
-                'operation' => self::SERVICE_NAME . 'Delete',
+                'operation' => self::SERVICE_NAME . 'MassDelete',
             ],
         ];
         $response = $this->_webApiCall(
@@ -344,7 +344,7 @@ class SpecialPriceStorageTest extends WebapiAbstract
             'soap' => [
                 'service' => self::SERVICE_NAME,
                 'serviceVersion' => self::SERVICE_VERSION,
-                'operation' => self::SERVICE_NAME . 'Delete',
+                'operation' => self::SERVICE_NAME . 'MassDelete',
             ],
         ];
 

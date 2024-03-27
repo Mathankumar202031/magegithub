@@ -519,7 +519,7 @@ class CompareTest extends AbstractController
     }
 
     /**
-     * Delete product in secure area
+     * MassDelete product in secure area
      *
      * @param ProductInterface $product
      * @return bool

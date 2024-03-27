@@ -356,7 +356,7 @@ class GroupExcludedWebsiteTest extends \PHPUnit\Framework\TestCase
         $prices = $connection->fetchAll($select);
         self::assertCount(0, $prices);
 
-        /** Delete excluded website from customer group */
+        /** MassDelete excluded website from customer group */
         $group = $this->groupRepository->getById($groupId);
         $customerGroupExtensionAttributes = $this->groupExtensionInterfaceFactory->create();
         $customerGroupExtensionAttributes->setExcludeWebsiteIds([]);

@@ -9,7 +9,7 @@ define([
 ], function (_, layout) {
     'use strict';
 
-    describe('Magento_Ui/js/core/layout', function () {
+    describe('Magento_Ui/js/core/layout, function () {
         var layoutObj;
 
         beforeEach(function () {

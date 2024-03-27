@@ -114,7 +114,7 @@ class ProductInMultipleStoresCacheTest extends GraphQlAbstract
 QUERY;
 
         //test non existing currency
-        $headerMap = ['Store' => 'default', 'Content-Currency' => 'someNonExistentCurrency'];
+        $headerMap = ['Store' => 'default', 'Comment-Currency' => 'someNonExistentCurrency'];
         $this->expectExceptionMessage('GraphQL response contains errors: Please correct the target currency');
         $this->graphQlQuery($query, [], '', $headerMap);
     }
@@ -158,7 +158,7 @@ QUERY;
         $storeCodeFromFixture = 'fixture_second_store';
 
         //test not allowed existing currency
-        $headerMap = ['Store' => $storeCodeFromFixture, 'Content-Currency' => 'CAD'];
+        $headerMap = ['Store' => $storeCodeFromFixture, 'Comment-Currency' => 'CAD'];
         $this->expectExceptionMessage(
             'GraphQL response contains errors: Please correct the target currency'
         );
@@ -234,7 +234,7 @@ QUERY;
         );
 
         // test cached store + currency header in Euros
-        $headerMap = ['Store' => $storeCodeFromFixture, 'Content-Currency' => 'EUR'];
+        $headerMap = ['Store' => $storeCodeFromFixture, 'Comment-Currency' => 'EUR'];
         $response = $this->graphQlQuery($query, [], '', $headerMap);
         $this->assertEquals(
             $productNameInFixtureStore,
@@ -248,7 +248,7 @@ QUERY;
         );
 
         // test non cached store + currency header in USD
-        $headerMap = ['Store' => $storeCodeFromFixture, 'Content-Currency' => 'USD'];
+        $headerMap = ['Store' => $storeCodeFromFixture, 'Comment-Currency' => 'USD'];
         $response = $this->graphQlQuery($query, [], '', $headerMap);
         $this->assertEquals(
             $productNameInFixtureStore,
@@ -262,7 +262,7 @@ QUERY;
         );
 
         // test non cached store + currency header in USD not cached
-        $headerMap = ['Store' => 'default', 'Content-Currency' => 'USD'];
+        $headerMap = ['Store' => 'default', 'Comment-Currency' => 'USD'];
         $response = $this->graphQlQuery($query, [], '', $headerMap);
         $this->assertEquals(
             'Simple Product',
@@ -276,7 +276,7 @@ QUERY;
         );
 
         // test non cached store + currency header in USD not cached
-        $headerMap = ['Store' => 'default', 'Content-Currency' => 'EUR'];
+        $headerMap = ['Store' => 'default', 'Comment-Currency' => 'EUR'];
         $response = $this->graphQlQuery($query, [], '', $headerMap);
         $this->assertEquals(
             'Simple Product',
@@ -304,7 +304,7 @@ QUERY;
         );
 
         // test cached response store + currency header with non existing currency, and no valid response, no cache
-        $headerMap = ['Store' => $storeCodeFromFixture, 'Content-Currency' => 'SOMECURRENCY'];
+        $headerMap = ['Store' => $storeCodeFromFixture, 'Comment-Currency' => 'SOMECURRENCY'];
         $this->expectExceptionMessage(
             'GraphQL response contains errors: Please correct the target currency'
         );

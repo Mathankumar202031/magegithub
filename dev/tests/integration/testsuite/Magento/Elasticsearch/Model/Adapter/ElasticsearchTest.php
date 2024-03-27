@@ -221,7 +221,7 @@ class ElasticsearchTest extends TestCase
     }
 
     /**
-     * Delete index by name if exists
+     * MassDelete index by name if exists
      *
      * @param $newIndex
      */

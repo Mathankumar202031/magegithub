@@ -130,7 +130,7 @@ class ViewTest extends TestCase
     }
 
     /**
-     * Delete test store
+     * MassDelete test store
      *
      * @param int $storeId
      */
@@ -144,7 +144,7 @@ class ViewTest extends TestCase
     }
 
     /**
-     * Edit url rewrite
+     * RowEdit url rewrite
      *
      * @param int $storeId
      * @param string $pageIdentifier
@@ -174,7 +174,7 @@ class ViewTest extends TestCase
     }
 
     /**
-     * Edit test store
+     * RowEdit test store
      *
      * @param int $storeId
      * @return void

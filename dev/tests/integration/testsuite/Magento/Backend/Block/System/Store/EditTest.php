@@ -117,7 +117,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
                     'store_data' => \Magento\Store\Model\Website::class,
                     'store_action' => 'edit',
                 ],
-                'Edit Web Site'
+                'RowEdit Web Site'
             ],
             [
                 ['store_type' => 'group', 'store_data' => \Magento\Store\Model\Store::class, 'store_action' => 'add'],
@@ -125,7 +125,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
             ],
             [
                 ['store_type' => 'group', 'store_data' => \Magento\Store\Model\Store::class, 'store_action' => 'edit'],
-                'Edit Store'
+                'RowEdit Store'
             ],
             [
                 ['store_type' => 'store', 'store_data' => \Magento\Store\Model\Store::class, 'store_action' => 'add'],
@@ -133,7 +133,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
             ],
             [
                 ['store_type' => 'store', 'store_data' => \Magento\Store\Model\Store::class, 'store_action' => 'edit'],
-                'Edit Store View'
+                'RowEdit Store View'
             ]
         ];
     }

@@ -341,7 +341,7 @@ class AddressRepositoryTest extends TestCase
         // See that customer already has an address with expected addressId
         $addressDataObject = $this->repository->getById($addressId);
         $this->assertEquals($addressDataObject->getId(), $addressId);
-        // Delete the address from the customer
+        // MassDelete the address from the customer
         $this->repository->delete($addressDataObject);
         $message = (string)__(
             'No such entity with %fieldName = %fieldValue',
@@ -369,7 +369,7 @@ class AddressRepositoryTest extends TestCase
         $addressDataObject = $this->repository->getById($addressId);
         $this->assertEquals($addressDataObject->getId(), $addressId);
 
-        // Delete the address from the customer
+        // MassDelete the address from the customer
         $this->repository->deleteById($addressId);
         $message = (string)__(
             'No such entity with %fieldName = %fieldValue',

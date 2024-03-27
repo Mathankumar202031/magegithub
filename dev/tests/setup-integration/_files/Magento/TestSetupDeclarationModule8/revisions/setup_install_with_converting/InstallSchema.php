@@ -144,7 +144,7 @@ class InstallSchema implements InstallSchemaInterface
                 [
                     'nullable' => false,
                 ],
-                'Content'
+                'Comment'
             );
     }
 

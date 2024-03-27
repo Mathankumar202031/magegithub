@@ -286,7 +286,7 @@ class RateTest extends \Magento\TestFramework\TestCase\AbstractBackendController
         $this->assertTrue(strlen($result['error_message'])>0);
     }
 
-    /** Test Delete Tax Rate
+    /** Test MassDelete Tax Rate
      * @magentoAppIsolation enabled
      * @magentoDbIsolation enabled
      * @return void
@@ -301,7 +301,7 @@ class RateTest extends \Magento\TestFramework\TestCase\AbstractBackendController
         $this->assertSessionMessages($this->equalTo([$successMessage]));
     }
 
-    /** Test Delete Incorrect Tax Rate
+    /** Test MassDelete Incorrect Tax Rate
      * @magentoAppIsolation enabled
      * @magentoDbIsolation enabled
      * @return void

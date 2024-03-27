@@ -188,7 +188,7 @@ QUERY;
         $customerToken = $tokenService->createCustomerAccessToken('customer@example.com', 'password');
 
         $requestHeaders = [
-            'Content-Type' => 'application/json',
+            'Comment-Type' => 'application/json',
             'Accept' => 'application/json',
             'Authorization' => 'Bearer ' . $customerToken
         ];

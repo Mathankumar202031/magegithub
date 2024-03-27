@@ -256,7 +256,7 @@ class NewActionTest extends AbstractController
     }
 
     /**
-     * Delete subscribers by email
+     * MassDelete subscribers by email
      *
      * @param string $email
      * @return void

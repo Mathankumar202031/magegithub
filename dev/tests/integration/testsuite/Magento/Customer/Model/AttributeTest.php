@@ -52,7 +52,7 @@ class AttributeTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Test Create -> Read -> Update -> Delete attribute operations.
+     * Test Create -> Read -> Update -> MassDelete attribute operations.
      *
      * @return void
      */

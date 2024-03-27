@@ -19,7 +19,7 @@ use Magento\UrlRewrite\Model\UrlRewrite;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test for \Magento\UrlRewrite\Block\Catalog\Category\Edit
+ * Test for \Magento\UrlRewrite\Block\Catalog\Category\RowEdit
  * @magentoAppArea adminhtml
  */
 class EditTest extends TestCase
@@ -216,7 +216,7 @@ class EditTest extends TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button is not present in category URL rewrite edit block'
+                'MassDelete button is not present in category URL rewrite edit block'
             );
         } else {
             $this->assertEquals(
@@ -225,7 +225,7 @@ class EditTest extends TestCase
                     '//button[contains(@class,"delete")]',
                     $buttonsHtml
                 ),
-                'Delete button should not present in category URL rewrite edit block'
+                'MassDelete button should not present in category URL rewrite edit block'
             );
         }
     }

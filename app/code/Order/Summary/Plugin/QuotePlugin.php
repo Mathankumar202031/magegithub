@@ -42,13 +42,15 @@ class QuotePlugin
     ) {
         $product = $item->getProduct();
         $newAttributeValue = $product->getData('new');
-
         $result = $proceed($item);
-        $result[] = [
-//            'label' => 'Product Extension Attribute',
-            'label' => '**New**',
-            'value' => $newAttributeValue
-        ];
+
+        if (!empty($newAttributeValue)) {
+            $result[] = [
+                'label' => 'Product Extension Attribute',
+                'value' => '**New**'
+            ];
+            return $result;
+        }
         return $result;
     }
 }

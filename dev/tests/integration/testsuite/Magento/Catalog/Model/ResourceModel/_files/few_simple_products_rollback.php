@@ -14,7 +14,7 @@ $productRepository = Bootstrap::getObjectManager()
     ->get(ProductRepositoryInterface::class);
 
 /**
- * Delete 10 products
+ * MassDelete 10 products
  */
 $productsAmount = 10;
 

@@ -57,7 +57,7 @@ QUERY;
         $this->assertArrayHasKey('items', $response['products']);
         $this->assertCount(1, $response['products']['items']);
 
-        // Delete the product and verify it is actually not accessible via the storefront anymore
+        // MassDelete the product and verify it is actually not accessible via the storefront anymore
         /** @var ProductRepositoryInterface $productRepository */
         $productRepository = ObjectManager::getInstance()->get(ProductRepositoryInterface::class);
 

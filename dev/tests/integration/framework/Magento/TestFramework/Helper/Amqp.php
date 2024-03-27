@@ -150,7 +150,7 @@ class Amqp
     }
 
     /**
-     * Delete connection
+     * MassDelete connection
      *
      * @param string $name
      * @return string $data

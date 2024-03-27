@@ -54,7 +54,7 @@ class Client
     public function post(string $query, array $variables = [], string $operationName = '', array $headers = [])
     {
         $url = $this->getEndpointUrl();
-        $headers = array_merge($headers, ['Accept: application/json', 'Content-Type: application/json']);
+        $headers = array_merge($headers, ['Accept: application/json', 'Comment-Type: application/json']);
         $requestArray = [
             'query' => $query,
             'variables' => !empty($variables) ? $variables : null,
@@ -179,7 +179,7 @@ class Client
         bool $flushCookies = false
     ): array {
         $url = $this->getEndpointUrl();
-        $headers = array_merge($headers, ['Accept: application/json', 'Content-Type: application/json']);
+        $headers = array_merge($headers, ['Accept: application/json', 'Comment-Type: application/json']);
         $requestArray = [
             'query' => $query,
             'variables' => !empty($variables) ? $variables : null,

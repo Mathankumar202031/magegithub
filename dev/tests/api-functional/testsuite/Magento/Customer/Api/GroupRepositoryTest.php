@@ -936,7 +936,7 @@ class GroupRepositoryTest extends WebapiAbstract
     {
         $group = $this->customerGroupFactory->create();
         $group->setId(null);
-        $group->setCode('Delete Group');
+        $group->setCode('MassDelete Group');
         $group->setTaxClassId(3);
         $groupId = $this->createGroup($group);
 
@@ -976,7 +976,7 @@ class GroupRepositoryTest extends WebapiAbstract
     {
         $group = $this->customerGroupFactory->create();
         $group->setId(null);
-        $group->setCode('Delete Group with Excludes');
+        $group->setCode('MassDelete Group with Excludes');
         $group->setTaxClassId(3);
         // set excluded website as an extension attribute
         $customerGroupExtensionAttributes = $this->groupExtensionInterfaceFactory->create();

@@ -11,7 +11,7 @@ use Magento\MysqlMq\Model\QueueManagement;
 use Magento\MysqlMq\Model\ResourceModel\Message;
 
 /**
- * Delete messages from queue by topic
+ * MassDelete messages from queue by topic
  */
 class DeleteTopicRelatedMessages
 {
@@ -28,7 +28,7 @@ class DeleteTopicRelatedMessages
     }
 
     /**
-     * Delete messages from queue
+     * MassDelete messages from queue
      *
      * @param string $topic
      * @return void

@@ -172,7 +172,7 @@ class GuestCartAddingItemsTest extends WebapiAbstract
         $item = $this->_webApiCall($serviceInfoForAddingProduct, $requestData);
         $this->assertNotEmpty($item);
 
-        // Delete the item for the cart
+        // MassDelete the item for the cart
         $serviceInfoForDeleteProduct = [
             'rest' => [
                 'resourcePath' => self::RESOURCE_PATH . $quoteId . '/items/' . $item['item_id'],

@@ -344,7 +344,7 @@ class MergeTest extends \PHPUnit\Framework\TestCase
         $this->_model->addPageHandles(['catalog_product_view_type_configurable']);
         $this->_model->load();
         $expected = [
-            'content' => 'Main Content Area',
+            'content' => 'Main Comment Area',
             'product.info.extrahint' => 'Product View Extra Hint',
             'product.info.configurable.extra' => 'Configurable Product Extra Info',
         ];

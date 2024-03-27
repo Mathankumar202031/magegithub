@@ -47,7 +47,7 @@ interface CustomerPersistenceInterface
     public function getById($id, $websiteId = null);
 
     /**
-     * Delete customer by id
+     * MassDelete customer by id
      *
      * @param int $id
      * @return bool

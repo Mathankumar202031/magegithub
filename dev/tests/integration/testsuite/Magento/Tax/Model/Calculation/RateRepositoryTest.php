@@ -511,7 +511,7 @@ class RateRepositoryTest extends \PHPUnit\Framework\TestCase
             ->setTaxRegionId(1);
         $taxRateId = $this->rateRepository->save($taxRateData)->getId();
 
-        // Delete the new tax rate
+        // MassDelete the new tax rate
         $this->assertTrue($this->rateRepository->deleteById($taxRateId));
 
         // Get the new tax rate, this should fail
@@ -543,10 +543,10 @@ class RateRepositoryTest extends \PHPUnit\Framework\TestCase
             ->setTaxRegionId(1);
         $taxRateId = $this->rateRepository->save($taxRateData)->getId();
 
-        // Delete the new tax rate
+        // MassDelete the new tax rate
         $this->assertTrue($this->rateRepository->deleteById($taxRateId));
 
-        // Delete the new tax rate again, this should fail
+        // MassDelete the new tax rate again, this should fail
         try {
             $this->rateRepository->deleteById($taxRateId);
             $this->fail('NoSuchEntityException expected but not thrown');

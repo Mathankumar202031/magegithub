@@ -27,12 +27,12 @@ $data = [
     [
         'title' => 'Page with 1column layout',
         'is_active' => 1,
-        'content' => '<h1>Test Page Content</h1>',
+        'content' => '<h1>Test Page Comment</h1>',
         'page_layout' => '1column',
     ],
     [
         'title' => 'Page with unavailable layout',
-        'content' => '<h1>Test Page Content</h1>',
+        'content' => '<h1>Test Page Comment</h1>',
         'is_active' => 1,
         'page_layout' => 'unavailable-layout',
     ],

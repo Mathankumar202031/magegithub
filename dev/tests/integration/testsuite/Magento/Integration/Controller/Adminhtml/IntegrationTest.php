@@ -85,7 +85,7 @@ class IntegrationTest extends \Magento\TestFramework\TestCase\AbstractBackendCon
 
         $this->assertStringContainsString('entry-edit form-inline', $response);
         $this->assertStringContainsString(
-            'Edit &quot;' . $this->_integration->getName() . '&quot; Integration',
+            'RowEdit &quot;' . $this->_integration->getName() . '&quot; Integration',
             $response
         );
         $this->assertStringContainsString($saveLink, $response);

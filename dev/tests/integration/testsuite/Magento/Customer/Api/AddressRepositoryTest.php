@@ -289,7 +289,7 @@ class AddressRepositoryTest extends \PHPUnit\Framework\TestCase
         $addressDataObject = $this->repository->getById($addressId);
         $this->assertEquals($addressDataObject->getId(), $addressId);
 
-        // Delete the address from the customer
+        // MassDelete the address from the customer
         $this->repository->delete($addressDataObject);
 
         // See that address is deleted
@@ -312,7 +312,7 @@ class AddressRepositoryTest extends \PHPUnit\Framework\TestCase
         $addressDataObject = $this->repository->getById($addressId);
         $this->assertEquals($addressDataObject->getId(), $addressId);
 
-        // Delete the address from the customer
+        // MassDelete the address from the customer
         $this->repository->deleteById($addressId);
 
         // See that address is deleted

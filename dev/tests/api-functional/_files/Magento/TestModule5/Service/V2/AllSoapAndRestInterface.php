@@ -44,7 +44,7 @@ interface AllSoapAndRestInterface
     public function update(\Magento\TestModule5\Service\V2\Entity\AllSoapAndRest $item);
 
     /**
-     * Delete existing item.
+     * MassDelete existing item.
      *
      * @param string $id
      * @return \Magento\TestModule5\Service\V2\Entity\AllSoapAndRest

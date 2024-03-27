@@ -313,7 +313,7 @@ class JsonGenerationFromDataObjectTest extends \Magento\TestFramework\TestCase\W
                         'tags' => [
                             'testModule5AllSoapAndRestV2',
                         ],
-                        'description' => 'Delete existing item.',
+                        'description' => 'MassDelete existing item.',
                         'operationId' => 'DeleteV2TestModule5Id',
                         'parameters' => [
                             [

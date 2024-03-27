@@ -47,7 +47,7 @@ class Entity
     }
 
     /**
-     * Test Create -> Read -> Update -> Delete operations
+     * Test Create -> Read -> Update -> MassDelete operations
      */
     public function testCrud()
     {
@@ -113,6 +113,6 @@ class Entity
 
         $model = $this->_getEmptyModel();
         $model->load($modelId);
-        \PHPUnit\Framework\Assert::assertEmpty($model->getId(), 'CRUD Delete error');
+        \PHPUnit\Framework\Assert::assertEmpty($model->getId(), 'CRUD MassDelete error');
     }
 }

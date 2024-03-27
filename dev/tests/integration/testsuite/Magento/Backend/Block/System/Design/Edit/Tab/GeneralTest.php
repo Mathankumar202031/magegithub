@@ -6,7 +6,7 @@
 namespace Magento\Backend\Block\System\Design\Edit\Tab;
 
 /**
- * Test class for \Magento\Backend\Block\System\Design\Edit\Tab\General
+ * Test class for \Magento\Backend\Block\System\Design\RowEdit\Tab\General
  * @magentoAppArea adminhtml
  */
 class GeneralTest extends \PHPUnit\Framework\TestCase

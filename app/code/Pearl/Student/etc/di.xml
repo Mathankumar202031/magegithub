@@ -13,4 +13,32 @@
 <!--    <type name="Magento\Quote\Api\CartRepositoryInterface">-->
 <!--        <plugin name="cart_extra_attribute" type="Pearl\Student\Plugin\CartRepositoryPlugin" />-->
 <!--    </type>-->
+<!--    <virtualType name="Pearl\Student\Model\ResourceModel\Registration\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">-->
+<!--        <arguments>-->
+<!--            <argument name="mainTable" xsi:type="string">student_registration</argument>-->
+<!--            <argument name="resourceModel" xsi:type="string">Pearl\Student\Model\ResourceModel\Registration</argument>-->
+<!--        </arguments>-->
+<!--    </virtualType>-->
+<!--    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
+<!--        <arguments>-->
+<!--            <argument name="collections" xsi:type="array">-->
+<!--                <item name="student_registration_listing_data_source" xsi:type="string">Pearl\Student\Model\ResourceModel\Registration\Grid\Collection</item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+        <virtualType name="Pearl\Student\Model\ResourceModel\Registration\Grid\Collection"
+                     type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+            <arguments>
+                <argument name="mainTable" xsi:type="string">student_registration</argument>
+                <argument name="resourceModel" xsi:type="string">Pearl\Student\Model\ResourceModel\Registration</argument>
+            </arguments>
+        </virtualType>
+        <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+            <arguments>
+                <argument name="collections" xsi:type="array">
+                    <item name="student_registration_listing_data_source"
+                          xsi:type="string">Pearl\Student\Model\ResourceModel\Registration\Grid\Collection</item>
+                </argument>
+            </arguments>
+        </type>
 </config>

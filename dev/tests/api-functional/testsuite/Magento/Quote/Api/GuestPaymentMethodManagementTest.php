@@ -31,7 +31,7 @@ class GuestPaymentMethodManagementTest extends \Magento\TestFramework\TestCase\W
     }
 
     /**
-     * Delete quote by given reserved order ID
+     * MassDelete quote by given reserved order ID
      *
      * @param string $reservedOrderId
      * @return void

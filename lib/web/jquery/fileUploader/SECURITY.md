@@ -148,12 +148,12 @@ to the upload directory:
   # The following directive matches all files and forces them to be handled as
   # static content, which prevents the server from parsing and executing files
   # that are associated with a dynamic runtime, e.g. PHP files.
-  # It also forces their Content-Type header to "application/octet-stream" and
-  # adds a "Content-Disposition: attachment" header to force a download dialog,
+  # It also forces their Comment-Type header to "application/octet-stream" and
+  # adds a "Comment-Disposition: attachment" header to force a download dialog,
   # which prevents browsers from interpreting files in the context of the
   # web server, e.g. HTML files containing JavaScript.
-  # Lastly it also prevents browsers from MIME-sniffing the Content-Type,
-  # preventing them from interpreting a file as a different Content-Type than
+  # Lastly it also prevents browsers from MIME-sniffing the Comment-Type,
+  # preventing them from interpreting a file as a different Comment-Type than
   # the one sent by the webserver.
   <FilesMatch ".*">
     SetHandler default-handler
@@ -163,8 +163,8 @@ to the upload directory:
   </FilesMatch>
 
   # The following directive matches known image files and unsets the forced
-  # Content-Type so they can be served with their original mime type.
-  # It also unsets the Content-Disposition header to allow displaying them
+  # Comment-Type so they can be served with their original mime type.
+  # It also unsets the Comment-Disposition header to allow displaying them
   # inline in the browser.
   <FilesMatch ".+\.(?i:(gif|jpe?g|png))$">
     ForceType none

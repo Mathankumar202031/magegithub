@@ -12,7 +12,7 @@ use Magento\Integration\Model\Integration;
 use Magento\TestFramework\Helper\Bootstrap;
 
 /**
- * Test class for \Magento\Integration\Block\Adminhtml\Integration\Edit
+ * Test class for \Magento\Integration\Block\Adminhtml\Integration\RowEdit
  *
  * @magentoAppArea adminhtml
  */
@@ -70,7 +70,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
         $registry->register(IntegrationController::REGISTRY_KEY_CURRENT_INTEGRATION, $integrationData);
 
         $headerText = $this->editBlock->getHeaderText();
-        $this->assertEquals("Edit Integration '%1'", $headerText->getText());
+        $this->assertEquals("RowEdit Integration '%1'", $headerText->getText());
         $this->assertEquals($integrationName, $headerText->getArguments()[0]);
 
         // Tear down
@@ -97,7 +97,7 @@ class EditTest extends \PHPUnit\Framework\TestCase
             ->create(\Magento\Integration\Block\Adminhtml\Integration\Edit::class);
 
         $headerText = $editBlock->getHeaderText();
-        $this->assertEquals("Edit Integration '%1'", $headerText->getText());
+        $this->assertEquals("RowEdit Integration '%1'", $headerText->getText());
         $this->assertEquals($integrationName, $headerText->getArguments()[0]);
 
         $buttonList = Bootstrap::getObjectManager()

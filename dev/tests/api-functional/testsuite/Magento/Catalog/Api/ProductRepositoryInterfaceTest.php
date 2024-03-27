@@ -549,7 +549,7 @@ class ProductRepositoryInterfaceTest extends WebapiAbstract
             "The product that was requested doesn't exist. Verify the product and try again."
         );
 
-        // Delete all with 'all' store code
+        // MassDelete all with 'all' store code
         $this->deleteProduct($sku);
         $this->getProduct($sku);
     }
@@ -1521,7 +1521,7 @@ class ProductRepositoryInterfaceTest extends WebapiAbstract
     }
 
     /**
-     * Delete Product
+     * MassDelete Product
      *
      * @param string $sku
      * @return boolean

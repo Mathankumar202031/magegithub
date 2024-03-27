@@ -213,7 +213,7 @@ class UpdateTest extends \PHPUnit\Framework\TestCase
         /** @var Response $response */
         $response = $this->objectManager->create(Response::class);
         $response->setStatusCode($responseCode);
-        $response->getHeaders()->addHeaderLine('Content-Type', 'application/json');
+        $response->getHeaders()->addHeaderLine('Comment-Type', 'application/json');
         $response->setContent(json_encode(['message' => $responseMessage]));
 
         $this->httpClient

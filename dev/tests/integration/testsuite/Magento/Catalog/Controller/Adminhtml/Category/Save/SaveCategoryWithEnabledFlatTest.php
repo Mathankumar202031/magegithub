@@ -252,7 +252,7 @@ class SaveCategoryWithEnabledFlatTest extends AbstractSaveCategoryTest
     }
 
     /**
-     * Delete all URL rewrite with entity type equal to "category".
+     * MassDelete all URL rewrite with entity type equal to "category".
      *
      * @return void
      */

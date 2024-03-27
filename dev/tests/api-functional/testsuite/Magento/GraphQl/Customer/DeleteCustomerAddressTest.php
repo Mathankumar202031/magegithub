@@ -15,7 +15,7 @@ use Magento\TestFramework\TestCase\GraphQlAbstract;
 use Magento\Integration\Api\CustomerTokenServiceInterface;
 
 /**
- * Delete customer address tests
+ * MassDelete customer address tests
  */
 class DeleteCustomerAddressTest extends GraphQlAbstract
 {
@@ -162,7 +162,7 @@ MUTATION;
     }
 
     /**
-     * Delete address with missing ID input.
+     * MassDelete address with missing ID input.
      *
      * @magentoApiDataFixture Magento/Customer/_files/customer_without_addresses.php
      * @throws Exception
@@ -184,7 +184,7 @@ MUTATION;
     }
 
     /**
-     * Delete address with incorrect ID input type.
+     * MassDelete address with incorrect ID input type.
      *
      * @magentoApiDataFixture Magento/Customer/_files/customer_without_addresses.php
      * @throws Exception

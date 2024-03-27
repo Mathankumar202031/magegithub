@@ -63,7 +63,7 @@ class ExtractAssetsFromContentTest extends TestCase
     public function contentProvider()
     {
         return [
-            'Empty Content' => [
+            'Empty Comment' => [
                 '',
                 []
             ],

@@ -251,7 +251,7 @@ class LinkManagementTest extends WebapiAbstract
     }
 
     /**
-     * Delete product by SKU
+     * MassDelete product by SKU
      *
      * @param string $sku
      * @return bool

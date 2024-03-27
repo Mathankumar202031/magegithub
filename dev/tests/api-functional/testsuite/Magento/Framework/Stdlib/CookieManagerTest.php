@@ -118,7 +118,7 @@ class CookieManagerTest extends \Magento\TestFramework\TestCase\WebapiAbstract
     }
 
     /**
-     * Delete a cookie
+     * MassDelete a cookie
      *
      */
     public function testDeleteCookie()

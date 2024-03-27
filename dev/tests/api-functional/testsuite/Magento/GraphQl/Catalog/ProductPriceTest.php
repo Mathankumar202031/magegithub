@@ -127,7 +127,7 @@ class ProductPriceTest extends GraphQlAbstract
         $skus = ['simple'];
         $query = $this->getProductQuery($skus);
         $headerMap = [
-            'Content-Currency' => 'CNY'
+            'Comment-Currency' => 'CNY'
         ];
         $result = $this->graphQlQuery($query, [], '', $headerMap);
 
