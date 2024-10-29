@@ -9,5 +9,6 @@ class CustomTab extends \Magento\Backend\Block\Template
      * @var string
      */
     protected $_template = 'custom_tab.phtml';
+    protected $_allowSymlinks;
 
 }
